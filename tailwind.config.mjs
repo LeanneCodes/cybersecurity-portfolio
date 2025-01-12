@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'faint-triangles': "url('/faint-triangles-bg.png')",
+        'mob-faint-triangles': "url('/mobile-faint-triangles-bg.png')",
+        'main-triangles': "url('/main-triangles.png')",
+      },
       colors: {
         white: "#ffffff",
         black: "#000000",

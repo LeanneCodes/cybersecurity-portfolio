@@ -1,22 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from 'react'
-import DefaultFooter from './DefaultFooter';
-import HomeFooter from './HomeFooter';
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation"; // Import usePathname hook
+import DefaultFooter from "./DefaultFooter";
+import HomeFooter from "./HomeFooter";
 
 const Footer = () => {
-    const [isHomepage, setIsHomepage] = useState(false);
-  
-    useEffect(() => {
-      // Check the current window pathname and set state
-      setIsHomepage(window.location.pathname === "/");
-    }, []);
-  
-    return (
-      <>
-        {isHomepage ? <HomeFooter /> : <DefaultFooter />}
-      </>
-    );
-  };
+  const [isHomepage, setIsHomepage] = useState(false);
+  const pathname = usePathname(); // Get the current pathname using usePathname
 
-export default Footer
+  useEffect(() => {
+    setIsHomepage(pathname === "/");
+  }, [pathname]); // Add pathname to the dependency array
+
+  return <>{isHomepage ? <HomeFooter /> : <DefaultFooter />}</>;
+};
+
+export default Footer;

@@ -21,8 +21,9 @@ export default function Home() {
           I build display banner ads for esteemed clients and projects for a variety of audiences, including gamers, natural hair community and ecommerce for small businesses
         </h1>
 
-        <OutlineButton className="mt-[50px] ml-[200px] bg-white w-[200px] flex justify-around items-center relative z-10">
-          View Portfolio <HiOutlineArrowLongRight className="text-4xl" />
+        <OutlineButton className="mt-[50px] ml-[200px] bg-white w-[200px] flex justify-around items-center relative z-10 group">
+          View Portfolio
+          <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
         </OutlineButton>
 
         <Image

@@ -7,7 +7,6 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showMenuLogo, setShowMenuLogo] = useState(false);
 
   useEffect(() => {
     const mainBody = document.getElementById("homepage");
@@ -22,14 +21,6 @@ const Navbar = () => {
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
-
-    // If the menu is opening, show the logo after 2 seconds
-    if (!menuOpen) {
-      setTimeout(() => setShowMenuLogo(true), 2000);
-    } else {
-      // Hide the logo immediately when the menu closes
-      setShowMenuLogo(false);
-    }
   };
 
   return (
@@ -43,6 +34,7 @@ const Navbar = () => {
             alt="Logo"
             width={248}
             height={64}
+            priority
           />
         </Link>
 

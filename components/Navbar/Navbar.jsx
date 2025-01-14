@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full h-[149px] bg-transparent">
+    <nav className="relative w-full h-[149px] bg-transparent">
       {/* Top Navbar */}
       <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 relative z-10">
         {/* Logo */}
@@ -43,8 +43,6 @@ const Navbar = () => {
             alt="Logo"
             width={248}
             height={64}
-            className="z-50"
-            priority
           />
         </Link>
 
@@ -76,9 +74,9 @@ const Navbar = () => {
           className="sm:hidden cursor-pointer pl-24 relative z-50"
         >
           {menuOpen ? (
-            <AiOutlineClose size={25} />
+            <AiOutlineClose size={25}/>
           ) : (
-            <AiOutlineMenu size={25} />
+            <AiOutlineMenu size={25}/>
           )}
         </div>
       </div>
@@ -89,20 +87,7 @@ const Navbar = () => {
           menuOpen ? "left-0 bg-opacity-100" : "left-[-100%] bg-opacity-0"
         }`}
       >
-        {/* Menu Logo (delayed visibility) */}
-        {showMenuLogo && (
-          <div className="absolute top-0 left-[60px] h-[149px] flex items-center transition-opacity duration-500 z-50">
-            <Link href="/">
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                width={248}
-                height={64}
-                priority
-              />
-            </Link>
-          </div>
-        )}
+        
 
         {/* Nav Links */}
         <ul className="flex flex-col justify-end absolute bottom-40 right-0 gap-8 mt-8 px-8 text-white text-[20px] text-right z-50">

@@ -1,31 +1,22 @@
-import Link from 'next/link';
-import React from 'react';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+"use client";
+
+import React, { useState, useEffect } from 'react'
+import DefaultFooter from './DefaultFooter';
+import HomeFooter from './HomeFooter';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear(); // Get the current year dynamically
+    const [isHomepage, setIsHomepage] = useState(false);
+  
+    useEffect(() => {
+      // Check the current window pathname and set state
+      setIsHomepage(window.location.pathname === "/");
+    }, []);
+  
+    return (
+      <>
+        {isHomepage ? <HomeFooter /> : <DefaultFooter />}
+      </>
+    );
+  };
 
-  return (
-    <div className="fixed bottom-0 w-full bg-black h-[86px] text-white flex flex-row justify-between items-center px-[60px]">
-      <div>
-        <ul className="flex flex-row gap-1">
-          <Link href="/" aria-label="GitHub">
-            <li className="text-2xl hover:text-gray-400 transition-colors">
-              <FaGithub />
-            </li>
-          </Link>
-          <Link href="/" aria-label="LinkedIn">
-            <li className="text-2xl hover:text-gray-400 transition-colors">
-              <FaLinkedin />
-            </li>
-          </Link>
-        </ul>
-      </div>
-      <div>
-        Copyright, Leanne M. Goldsmith {currentYear}
-      </div>
-    </div>
-  );
-};
-
-export default Footer;
+export default Footer

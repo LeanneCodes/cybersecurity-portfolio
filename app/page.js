@@ -10,7 +10,9 @@ export default function Home() {
         src={"/main-triangles.png"}
         width={1182}
         height={1170}
-        className="hidden sm:block fixed bottom-0 right-0"
+        id="main_triangles"
+        className="fixed bottom-0 right-0 ease-in-out duration-1000"
+        priority
       />
       <h1 className="text-black">
         body

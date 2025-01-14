@@ -9,6 +9,17 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showMenuLogo, setShowMenuLogo] = useState(false);
 
+  useEffect(() => {
+    const mainTriangles = document.getElementById("main_triangles");
+    if (mainTriangles) {
+      if (menuOpen) {
+        mainTriangles.style.display = "none"; // Hide the triangles when the menu is open
+      } else {
+        mainTriangles.style.display = "block"; // Show the triangles when the menu is closed
+      }
+    }
+  }, [menuOpen]);
+
   const handleNav = () => {
     setMenuOpen(!menuOpen);
 
@@ -24,7 +35,7 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full h-[149px] bg-transparent">
       {/* Top Navbar */}
-      <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 relative z-50">
+      <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 relative z-10">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -80,7 +91,7 @@ const Navbar = () => {
       >
         {/* Menu Logo (delayed visibility) */}
         {showMenuLogo && (
-          <div className="absolute top-0 left-[60px] h-[149px] flex items-center transition-opacity duration-500">
+          <div className="absolute top-0 left-[60px] h-[149px] flex items-center transition-opacity duration-500 z-50">
             <Link href="/">
               <Image
                 src="/logo.png"
@@ -123,6 +134,7 @@ const Navbar = () => {
           </Link>
         </ul>
       </div>
+      
     </nav>
   );
 };

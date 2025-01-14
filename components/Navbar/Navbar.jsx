@@ -10,12 +10,12 @@ const Navbar = () => {
   const [showMenuLogo, setShowMenuLogo] = useState(false);
 
   useEffect(() => {
-    const mainTriangles = document.getElementById("main_triangles");
-    if (mainTriangles) {
+    const mainBody = document.getElementById("homepage");
+    if (mainBody) {
       if (menuOpen) {
-        mainTriangles.style.display = "none"; // Hide the triangles when the menu is open
+        mainBody.style.display = "none"; // Hide homepage content
       } else {
-        mainTriangles.style.display = "block"; // Show the triangles when the menu is closed
+        mainBody.style.display = "block"; // Show homepage content
       }
     }
   }, [menuOpen]);
@@ -86,7 +86,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 w-full sm:hidden h-screen bg-[#6E7B6C] bg-opacity-95 p-10 bg-mob-faint-triangles bg-cover bg-center bg-no-repeat transition-all duration-500 ${
-          menuOpen ? "left-0 opacity-100" : "left-[-100%] opacity-0"
+          menuOpen ? "left-0 bg-opacity-100" : "left-[-100%] bg-opacity-0"
         }`}
       >
         {/* Menu Logo (delayed visibility) */}

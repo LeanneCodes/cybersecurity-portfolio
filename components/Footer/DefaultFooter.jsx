@@ -6,7 +6,7 @@ const DefaultFooter = () => {
   const currentYear = new Date().getFullYear(); // Get the current year dynamically
 
   return (
-    <div className="fixed bottom-0 w-full bg-black h-[86px] text-white flex flex-row justify-between items-center px-[60px]">
+    <div className="fixed bottom-0 w-full bg-black h-[86px] text-white flex flex-row justify-between items-center px-[60px] z-50">
       <div>
         <ul className="flex flex-row gap-4">
           <Link href="/" aria-label="GitHub">

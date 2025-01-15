@@ -28,7 +28,7 @@ const Navbar = () => {
       {/* Top Navbar */}
       <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 relative z-10">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" className="cursor-pointer">
           <Image
             src="/logo.png"
             alt="Logo"

@@ -13,7 +13,7 @@ const Footer = () => {
     setIsHomepage(pathname === "/");
   }, [pathname]); // Add pathname to the dependency array
 
-  return <>{isHomepage ? <HomeFooter /> : <DefaultFooter />}</>;
+  return <div>{isHomepage ? <HomeFooter /> : <DefaultFooter />}</div>;
 };
 
 export default Footer;

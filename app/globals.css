@@ -24,10 +24,6 @@ body {
 
 main {
   flex-grow: 1; /* Ensures main content takes up available space */
+  position: relative;
 }
-
-footer {
-  /* Add any footer-specific styles if needed */
-}
-
 

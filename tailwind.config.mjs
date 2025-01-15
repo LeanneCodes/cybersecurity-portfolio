@@ -15,6 +15,13 @@ export default {
       colors: {
         white: "#ffffff",
         black: "#000000",
+        lightGrey: "#D7DFE2",
+        sage: "#A2B7AE",
+        moss: "#5E6C5C",
+        cream: "#F3EFE7",
+        darkGrey: "#182A2B",
+        grey: "#686866",
+        tan: "#D2BB99",
       },
     },
   },

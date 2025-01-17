@@ -1,32 +1,14 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import useBackgroundEffect from "@/hooks/useBackgroundEffect";
 
 const Page = () => {
-    const pathname = usePathname();
-
-    useEffect(() => {
-        const body = document.querySelector('body');
-
-        // Ensure the class is updated immediately when the path changes
-        if (pathname === "/contact") {
-            body.classList.remove('bg-faint-triangles');
-            body.classList.add('bg-blurred-triangles');
-        } else {
-            body.classList.add('bg-faint-triangles');
-        }
-
-        // Clean-up function to avoid side effects
-        return () => {
-            body.classList.add('bg-faint-triangles');
-            body.classList.remove('bg-blurred-triangles');
-        };
-    }, [pathname]);
+    useBackgroundEffect();
 
     return (
         <div className='flex px-60 pt-36'>

@@ -8,25 +8,29 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const mainBody = document.getElementById("homepage");
-    if (mainBody) {
-      if (menuOpen) {
-        mainBody.style.display = "none"; // Hide homepage content
-      } else {
-        mainBody.style.display = "block"; // Show homepage content
-      }
-    }
-  }, [menuOpen]);
-
+  // Handle menu toggle
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Automatically close mobile menu on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 640 && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [menuOpen]);
+
   return (
-    <nav className="relative w-full h-[149px] bg-transparent">
+    <nav className="fixed top-0 left-0 w-full h-[149px] bg-transparent z-[100]">
       {/* Top Navbar */}
-      <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 relative z-10">
+      <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 z-[101]">
         {/* Logo */}
         <Link href="/" className="cursor-pointer">
           <Image
@@ -38,51 +42,45 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Nav Links Desktop */}
+        {/* Desktop Nav Links */}
         <div className="hidden sm:flex">
-          <ul className="hidden sm:flex flex-row items-center gap-8">
+          <ul className="flex flex-row items-center gap-8">
             <Link href="/about">
-              <li className="text-[16px]">About Me</li>
+              <li className="text-[16px] hover:underline">About Me</li>
             </Link>
             <Link href="/projects">
-              <li className="text-[16px]">Projects</li>
+              <li className="text-[16px] hover:underline">Projects</li>
             </Link>
             <Link href="/cv">
-              <li className="btn border-2 border-black rounded-lg p-4 text-[16px] w-[84px]">
+              <li className="btn border-2 border-black rounded-lg p-4 text-[16px] w-[84px] hover:bg-gray-100">
                 My CV
               </li>
             </Link>
             <Link href="/contact">
-              <li className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[16px] w-[97px]">
+              <li className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[16px] w-[97px] hover:bg-gray-800">
                 Contact
               </li>
             </Link>
           </ul>
         </div>
 
-        {/* Burger and Close Icon */}
+        {/* Mobile Menu Icon */}
         <div
           onClick={handleNav}
-          className="sm:hidden cursor-pointer pl-24 relative z-50"
+          className="sm:hidden cursor-pointer relative z-[102]"
         >
-          {menuOpen ? (
-            <AiOutlineClose size={25}/>
-          ) : (
-            <AiOutlineMenu size={25}/>
-          )}
+          {menuOpen ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full sm:hidden h-screen bg-[#6E7B6C] bg-opacity-95 p-10 bg-mob-faint-triangles bg-cover bg-center bg-no-repeat transition-all duration-500 ${
-          menuOpen ? "left-0 bg-opacity-100" : "left-[-100%] bg-opacity-0"
+        className={`fixed top-0 left-0 w-full h-screen bg-[#6E7B6C] bg-opacity-100 p-10 bg-mob-faint-triangles bg-cover bg-center bg-no-repeat transition-transform duration-500 z-[101] ${
+          menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        
-
-        {/* Nav Links */}
-        <ul className="flex flex-col justify-end absolute bottom-40 right-0 gap-8 mt-8 px-8 text-white text-[20px] text-right z-50">
+        {/* Mobile Nav Links */}
+        <ul className="flex flex-col justify-center items-center h-full gap-8 text-white text-[20px]">
           <Link href="/about">
             <li onClick={handleNav} className="hover:text-gray-300">
               About Me
@@ -96,7 +94,7 @@ const Navbar = () => {
           <Link href="/cv">
             <li
               onClick={handleNav}
-              className="btn border-2 border-white rounded-lg p-4 text-[16px] text-center w-full hover:bg-white hover:text-black"
+              className="btn border-2 border-white rounded-lg p-4 text-[16px] w-full text-center hover:bg-white hover:text-black"
             >
               My CV
             </li>
@@ -104,14 +102,13 @@ const Navbar = () => {
           <Link href="/contact">
             <li
               onClick={handleNav}
-              className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[16px] w-[97px]"
+              className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[16px] w-full text-center hover:bg-gray-800"
             >
               Contact
             </li>
           </Link>
         </ul>
       </div>
-      
     </nav>
   );
 };

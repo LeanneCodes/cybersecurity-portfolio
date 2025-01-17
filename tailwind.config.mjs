@@ -24,6 +24,17 @@ export default {
         grey: "#686866",
         tan: "#D2BB99",
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+      fontWeight: {
+        extraLight: '100',
+        light: '200',
+        regular: '400',
+        medium: '500',
+        bold: '700',
+        extraBold: '900',
+      },
     },
   },
   plugins: [],

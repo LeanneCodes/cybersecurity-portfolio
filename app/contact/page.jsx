@@ -32,8 +32,8 @@ const Page = () => {
         <div className='flex px-60 pt-36'>
             <div className='w-1/2'>
                 <div>
-                    <h1 className='text-2xl'>Contact me!</h1>
-                    <h2 className='text-6xl mb-10'>Let's work...</h2>
+                    <h1 className='text-[36px] font-bold'>Contact me!</h1>
+                    <h2 className='text-[62px] mt-[-25px] mb-10 font-bold'>Let's work...</h2>
 
                     <p className='w-3/4 mb-10'>I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community and ecommerce for small businesses</p>
 

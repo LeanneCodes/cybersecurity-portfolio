@@ -1,5 +1,6 @@
 import OutlineButton from "@/components/Buttons/OutlineButton";
 import Image from "next/image";
+import Link from "next/link";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 export default function Home() {
@@ -16,14 +17,16 @@ export default function Home() {
           className="mt-[80px] ml-[200px] relative z-10"
         />
 
-        <h1 className="mt-[50px] ml-[200px] w-[30%] relative z-10">
+        <h1 className="mt-[50px] ml-[200px] w-[40%] relative z-10 text-[20px]">
           I build display banner ads for esteemed clients and projects for a variety of audiences, including gamers, natural hair community and ecommerce for small businesses
         </h1>
 
-        <OutlineButton className="mt-[50px] ml-[200px] bg-white w-[200px] flex justify-around items-center relative z-10 group">
-          View Portfolio
-          <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
-        </OutlineButton>
+        <Link href="/projects">
+          <OutlineButton className="mt-[50px] ml-[200px] text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
+            View Portfolio
+            <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
+          </OutlineButton>
+        </Link>
 
         <Image
           alt="Triangles"

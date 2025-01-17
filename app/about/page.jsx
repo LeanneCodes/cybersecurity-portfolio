@@ -31,7 +31,7 @@ const page = () => {
             </div>
 
             <div className='flex flex-col w-full mb-10'>
-                <h1 className='mb-2 text-xl'>Skills:</h1>
+                <h1 className='mb-2 text-xl font-bold'>Skills:</h1>
                 <div className='flex gap-2 flex-wrap'>
                     <Labels className="bg-lightGrey">Mobile</Labels>
                     <Labels className="bg-sage">App</Labels>
@@ -52,10 +52,12 @@ const page = () => {
                 </p>
             </div>
 
-            <OutlineButton className=" bg-white w-[200px] h-[60px] flex justify-around items-center relative z-10 group mb-10">
-            View Portfolio
-            <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
-            </OutlineButton>
+            <Link href="/projects">
+                <OutlineButton className="mb-10 text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
+                    View Portfolio
+                    <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
+                </OutlineButton>
+            </Link>
 
             <div>
                 <ul className="flex flex-row gap-4">

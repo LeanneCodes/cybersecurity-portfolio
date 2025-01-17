@@ -163,7 +163,7 @@ const Page = () => {
                     ></textarea>
                 </div>
 
-                <div className="xxs:flex xxs:flex-col xxs:space-y-5 xxs:justify-between xxs:items-center xxs:pb-16 flex justify-between">
+                <div className="xxs:flex xxs:flex-col xxs:space-y-5 xxs:justify-between xxs:items-center xxs:pb-16 xs:space-y-10 flex justify-between">
                     <button
                     type="submit"
                     className="group flex items-center justify-between w-[120px] h-[55px] btn border-2 border-black rounded-lg p-4 cursor-pointer hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500"

@@ -22,7 +22,7 @@ export default function Home() {
         </h1>
 
         <Link href="/projects">
-          <OutlineButton className="xxs:w-4/5 xxs:mx-auto mt-[50px] ml-[200px] text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
+          <OutlineButton className="xxs:w-4/5 xxs:mx-auto xs:w-1/2 mt-[50px] ml-[200px] text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
             View Portfolio
             <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
           </OutlineButton>

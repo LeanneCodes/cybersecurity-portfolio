@@ -7,7 +7,7 @@ import Labels from '@/components/Labels/Labels';
 
 const page = () => {
   return (
-    <div className='xxs:flex xxs:flex-col xxs:pr-0 xxs:pb-0 lg:pt-20 2xl:flex-row 2xl:pr-40 flex pt-10 pr-48 pb-[86px]'>
+    <div className='xxs:flex xxs:flex-col xxs:pr-0 xxs:pb-0 lg:pt-20 2xl:flex-row 2xl:pr-40 4xl:pt-10 flex pt-10 pr-48 pb-[86px]'>
         <div className='2xl:justify-center 2xl:mt-[-60px] flex items-start flex-col w-1/2'>
             <Image
                 alt="Triangles with an image of Leanne"
@@ -44,7 +44,7 @@ const page = () => {
                 </div>
             </div>
 
-            <div className='xxs:mb-10 xxs:text-center 2xl:text-left'>
+            <div className='xxs:mb-10 xxs:text-center md:text-[20px] 2xl:text-left'>
                 <p>
                 I’m a Junior Frontend Developer with 3 years of experience. Over the years, I’ve worked on a range of projects, including building display ad banners for various clients. This has honed my ability to create engaging, responsive designs while adhering to client specifications.<br/><br/>
 

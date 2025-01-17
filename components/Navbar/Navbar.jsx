@@ -59,7 +59,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/about"
-                className={"relative py-2 group text-black text-[16px]"}
+                className={"relative py-2 group text-black text-[16px] 4xl:text-[20px]"}
               >
                 About Me
                 <span
@@ -74,7 +74,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/projects"
-                className={"relative py-2 group text-black text-[16px]"}
+                className={"relative py-2 group text-black text-[16px] 4xl:text-[20px]"}
               >
                 Projects
                 <span
@@ -87,12 +87,12 @@ const Navbar = () => {
               </Link>
             </li>
             <Link href="/cv">
-              <li className="btn border-2 border-black rounded-lg p-4 text-[16px] w-[88px] hover:bg-black hover:text-white hover:border-black">
+              <li className="btn border-2 border-black rounded-lg p-4 text-[16px] 4xl:text-[20px] w-fit hover:bg-black hover:text-white hover:border-black">
                 My CV
               </li>
             </Link>
             <Link href="/contact">
-              <li className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[16px] w-[97px] hover:bg-moss hover:border-moss hover:text-white">
+              <li className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[16px] 4xl:text-[20px] w-fit hover:bg-moss hover:border-moss hover:text-white">
                 Contact
               </li>
             </Link>

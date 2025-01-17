@@ -75,7 +75,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-[#6E7B6C] bg-opacity-100 p-10 bg-mob-faint-triangles bg-cover bg-center bg-no-repeat transition-transform duration-500 z-[101] ${
+        className={`fixed top-0 left-0 w-full h-screen bg-[#6E7B6C] bg-opacity-100 p-10 bg-mob-faint-triangles bg-cover bg-center bg-no-repeat transition-transform duration-500 z-[100] ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

@@ -49,13 +49,13 @@ const Navbar = () => {
             width={248}
             height={64}
             priority
-            className="xxs:w-1/2 relative"
+            className="xxs:w-1/2 sm:w-3/4 relative"
           />
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden sm:flex">
-          <ul className="flex flex-row items-center gap-8">
+        <div className="hidden md:flex">
+          <ul className="md:gap-5 lg:gap-8 flex flex-row items-center">
             <li>
               <Link
                 href="/about"
@@ -102,7 +102,7 @@ const Navbar = () => {
         {/* Mobile Menu Icon */}
         <div
           onClick={handleNav}
-          className="sm:hidden cursor-pointer relative z-[102]"
+          className="md:hidden cursor-pointer relative z-[102]"
         >
           {menuOpen ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
         </div>
@@ -115,7 +115,7 @@ const Navbar = () => {
         }`}
       >
         {/* Mobile Nav Links */}
-        <ul className="flex flex-col justify-center items-center h-full gap-8 text-white text-[20px]">
+        <ul className="flex flex-col justify-center items-center h-full gap-8 text-white text-[24px]">
           <Link href="/about">
             <li onClick={handleNav} className="hover:text-gray-300">
               About Me
@@ -129,7 +129,7 @@ const Navbar = () => {
           <Link href="/cv">
             <li
               onClick={handleNav}
-              className="btn border-2 border-white rounded-lg p-4 text-[16px] w-full text-center hover:bg-white hover:text-black"
+              className="btn border-2 border-white rounded-lg p-4 text-[24px] w-full text-center hover:bg-white hover:text-black"
             >
               My CV
             </li>
@@ -137,7 +137,7 @@ const Navbar = () => {
           <Link href="/contact">
             <li
               onClick={handleNav}
-              className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[16px] w-full text-center hover:bg-gray-800"
+              className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-[24px] w-full text-center hover:bg-gray-800"
             >
               Contact
             </li>

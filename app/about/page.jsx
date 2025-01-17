@@ -7,7 +7,7 @@ import Labels from '@/components/Labels/Labels';
 
 const page = () => {
   return (
-    <div className='xxs:flex xxs:flex-col xxs:pr-0 flex pt-10 pr-48 pb-[86px]'>
+    <div className='xxs:flex xxs:flex-col xxs:pr-0 xxs:pb-0 lg:pt-20 flex pt-10 pr-48 pb-[86px]'>
         <div className='flex items-start flex-col w-1/2'>
             <Image
                 alt="Triangles with an image of Leanne"
@@ -15,11 +15,11 @@ const page = () => {
                 width={500}
                 height={500}
                 id="about_triangles"
-                className="xxs:hidden sm:block relative left-0 top-0"
+                className="xxs:hidden 2xl:block relative left-0 top-0"
             />
         </div>
         <div className='xxs:w-4/5 xxs:mx-auto flex flex-col justify-around items-start w-1/2'>
-            <div className='mb-10'>
+            <div className='mb-10 md:w-full md:flex md:justify-center'>
                 <Image
                     src={"/logo.png"}
                     alt="Logo"

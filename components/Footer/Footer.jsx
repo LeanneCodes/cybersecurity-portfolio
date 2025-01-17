@@ -18,7 +18,7 @@ const Footer = () => {
   useEffect(() => {
     // Update footer type based on window width
     const handleResize = () => {
-      if (window.innerWidth >= 640) {
+      if (window.innerWidth >= 768) {
         // Show HomeFooter for wider screens (sm breakpoint and above)
         setShowHomeFooter(true);
       } else {

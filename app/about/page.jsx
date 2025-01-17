@@ -3,12 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Labels from '@/components/Labels/Labels';
+import ProfileLinks from '@/components/ProfileLinks/ProfileLinks';
 
 const page = () => {
   return (
-    <div className='flex pt-10 pr-24 pb-[86px]'>
+    <div className='flex pt-10 pr-72 pb-[86px]'>
         <div className='flex items-start flex-col w-1/4'>
             <Image
                 alt="Triangles with an image of Leanne"
@@ -45,10 +45,13 @@ const page = () => {
                 </div>
             </div>
 
-            <div className='mb-10 pr-72'>
+            <div className='mb-10'>
                 <p>
-                Hi, I'm Leanne Goldsmith, a frontend developer with a passion for transforming creative concepts and ideas into reality. I specialise in taking design visions from Adobe XD, Figma, and Photoshop and turning them into live, interactive web experiences using HTML, CSS, JavaScript, and React.<br/><br/>
-                Currently, I'm interning as a frontend developer at a startup, where I collaborate closely with my team to bring their ideas to life. My role involves understanding the team's vision and building functional and visually appealing web applications that meet their needs and their target audience. This hands-on experience has allowed me to enhance my problem-solving skills and deliver high-quality results.
+                I’m a Junior Frontend Developer with 3 years of experience. Over the years, I’ve worked on a range of projects, including building display ad banners for various clients. This has honed my ability to create engaging, responsive designs while adhering to client specifications.<br/><br/>
+
+                I also interned at a startup in Luxembourg, where I developed applications that involved working with APIs and Postman. This experience helped me sharpen my problem-solving skills and deepened my understanding of how frontend interfaces interact with backend systems.<br/><br/>
+
+                I’ve successfully completed two bootcamps—one focused on <a href=''>full-stack development</a> and the other on frontend technologies. These certifications have strengthened my knowledge of HTML, CSS, JavaScript, and React, and I’m eager to keep learning and applying new skills in my work.
                 </p>
             </div>
 
@@ -58,21 +61,6 @@ const page = () => {
                     <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
                 </OutlineButton>
             </Link>
-
-            <div>
-                <ul className="flex flex-row gap-4">
-                <Link href="/" aria-label="GitHub">
-                    <li className="text-4xl hover:text-gray-400 transition-colors">
-                    <FaGithub />
-                    </li>
-                </Link>
-                <Link href="/" aria-label="LinkedIn">
-                    <li className="text-4xl hover:text-gray-400 transition-colors">
-                    <FaLinkedin />
-                    </li>
-                </Link>
-                </ul>
-            </div>
             
         </div>
     </div>

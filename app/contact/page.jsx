@@ -2,11 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import useBackgroundEffect from "@/hooks/useBackgroundEffect";
 import emailjs from "emailjs-com";
+import ProfileLinks from '@/components/ProfileLinks/ProfileLinks';
 
 const Page = () => {
     useBackgroundEffect();
@@ -88,19 +87,8 @@ const Page = () => {
 
                     <p className='w-3/4 mb-10'>I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community and ecommerce for small businesses</p>
 
-                    <div>
-                        <ul className="flex flex-row gap-4">
-                        <Link href="/" aria-label="GitHub">
-                            <li className="text-2xl hover:text-gray-400 transition-colors">
-                            <FaGithub />
-                            </li>
-                        </Link>
-                        <Link href="/" aria-label="LinkedIn">
-                            <li className="text-2xl mb-10 hover:text-gray-400 transition-colors">
-                            <FaLinkedin />
-                            </li>
-                        </Link>
-                        </ul>
+                    <div className='mb-10'>
+                        <ProfileLinks />
                     </div>
 
                     <h3><strong>Email:</strong> leannemgoldsmith@gmail.com</h3>

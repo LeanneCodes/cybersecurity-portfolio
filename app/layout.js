@@ -21,15 +21,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${montserrat.variable} antialiased min-h-screen flex flex-col object-cover bg-cover bg-center bg-no-repeat bg-faint-triangles`}
       >
-        {/* Navbar */}
         <Navbar />
-
-        {/* Main Content */}
         <main className="flex-grow w-full pt-[149px] pb-[100px]">
           {children}
         </main>
-
-        {/* Footer */}
         <Footer />
       </body>
     </html>

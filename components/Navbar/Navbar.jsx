@@ -14,6 +14,24 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector("nav"); // or the appropriate selector for your navbar
+      if (window.scrollY > 10) {
+        navbar.classList.add("bg-white", "shadow-md");
+      } else {
+        navbar.classList.remove("bg-white", "shadow-md");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   // Automatically close mobile menu on window resize
   useEffect(() => {
     const handleResize = () => {

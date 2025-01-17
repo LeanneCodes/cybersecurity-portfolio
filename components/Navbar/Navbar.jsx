@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +28,15 @@ const Navbar = () => {
     };
   }, [menuOpen]);
 
+  const pathname = usePathname(); // Get the current path
+
+  // Function to determine if the link is active or hovered
+  const getNavLinkClass = (linkPath) => {
+    return `relative py-2 px-4 group ${
+      pathname === linkPath || "group-hover"
+    }`;
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full h-[149px] bg-transparent z-[100]">
       {/* Top Navbar */}
@@ -39,18 +49,43 @@ const Navbar = () => {
             width={248}
             height={64}
             priority
+            className="relative"
           />
         </Link>
 
         {/* Desktop Nav Links */}
         <div className="hidden sm:flex">
           <ul className="flex flex-row items-center gap-8">
-            <Link href="/about">
-              <li className="text-[16px] hover:underline">About Me</li>
-            </Link>
-            <Link href="/projects">
-              <li className="text-[16px] hover:underline">Projects</li>
-            </Link>
+            <li>
+              <Link
+                href="/about"
+                className={"relative py-2 px-4 group text-black"}
+              >
+                About Me
+                <span
+                  className={`absolute bottom-0 left-0 w-full h-[4px] bg-transparent 
+                    ${pathname === "/about" ? 
+                      "bg-[url('/nav-active-rectangle.png')] bg-no-repeat bg-bottom bg-contain" : 
+                      "group-hover:bg-[url('/nav-active-rectangle.png')] group-hover:bg-no-repeat group-hover:bg-bottom group-hover:bg-contain"}
+                  `}
+                ></span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/projects"
+                className={"relative py-2 px-4 group text-black"}
+              >
+                Projects
+                <span
+                  className={`absolute bottom-0 left-0 w-full h-[4px] bg-transparent 
+                    ${pathname === "/projects" ? 
+                      "bg-[url('/nav-active-rectangle.png')] bg-no-repeat bg-bottom bg-contain" : 
+                      "group-hover:bg-[url('/nav-active-rectangle.png')] group-hover:bg-no-repeat group-hover:bg-bottom group-hover:bg-contain"}
+                  `}
+                ></span>
+              </Link>
+            </li>
             <Link href="/cv">
               <li className="btn border-2 border-black rounded-lg p-4 text-[16px] w-[84px] hover:bg-gray-100">
                 My CV

@@ -6,7 +6,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 export default function Home() {
   return (
     <main
-      id="homepage"
+      id="homepage" className="xxs:mt-[149px]"
     >
       <div>
         <Image
@@ -14,15 +14,15 @@ export default function Home() {
           alt="Logo"
           width={780}
           height={64}
-          className="mt-[80px] ml-[200px] relative z-10"
+          className="xxs:w-4/5 xxs:mx-auto mt-[80px] ml-[200px] relative z-10"
         />
 
-        <h1 className="mt-[50px] ml-[200px] w-[40%] relative z-10 text-[20px]">
+        <h1 className="xxs:w-4/5 xxs:mx-auto xxs:text-center mt-[50px] ml-[200px] w-[40%] relative z-10 text-[20px]">
           I build display banner ads for esteemed clients and projects for a variety of audiences, including gamers, natural hair community and ecommerce for small businesses
         </h1>
 
         <Link href="/projects">
-          <OutlineButton className="mt-[50px] ml-[200px] text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
+          <OutlineButton className="xxs:w-4/5 xxs:mx-auto mt-[50px] ml-[200px] text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
             View Portfolio
             <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
           </OutlineButton>

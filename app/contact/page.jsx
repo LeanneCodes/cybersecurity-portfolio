@@ -95,25 +95,25 @@ const Page = () => {
     }, [status]);
 
     return (
-        <div className='flex px-60 pt-36'>
-            <div className='w-1/2'>
+        <div className='xxs:flex xxs:flex-col xxs:px-0 xxs:pt-12 flex px-60 pt-36'>
+            <div className='xxs:w-4/5 xxs:mx-auto xxs:mb-20 w-1/2'>
                 <div>
-                    <h1 className='text-[36px] font-bold'>Contact me!</h1>
-                    <h2 className='text-[62px] mt-[-25px] mb-10 font-bold'>Let's work...</h2>
+                    <h1 className='xxs:text-[24px] xxs:text-center text-[36px] font-bold'>Contact me!</h1>
+                    <h2 className='xxs:text-[40px] xxs:text-center xxs:mt-[-10px] text-[62px] mt-[-25px] mb-10 font-bold'>Let's work...</h2>
 
-                    <p className='w-3/4 mb-10'>I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community and ecommerce for small businesses</p>
+                    <p className='xxs:w-full xxs:text-center w-3/4 mb-10'>I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community and ecommerce for small businesses</p>
 
-                    <div className='mb-10'>
+                    <div className='xxs:mb-10 xxs:flex xxs:justify-center'>
                         <ProfileLinks />
                     </div>
 
-                    <h3><strong>Email:</strong> leannemgoldsmith@gmail.com</h3>
-                    <h3><strong>Mobile:</strong> 07496355196</h3>
+                    <h3 className='xxs:text-center'><strong>Email:</strong> leannemgoldsmith@gmail.com</h3><br/>
+                    <h3 className='xxs:text-center'><strong>Mobile:</strong> 07496355196</h3>
                 </div>
             </div>
 
             {/* Right Section with Form */}
-            <div className="w-1/2 px-16">
+            <div className="xxs:w-4/5 xxs:px-0 xxs:mx-auto w-1/2 px-16">
                 <form className="space-y-10" onSubmit={handleSubmit}>
                 <div>
                     <input
@@ -163,7 +163,7 @@ const Page = () => {
                     ></textarea>
                 </div>
 
-                <div className="flex justify-between">
+                <div className="xxs:flex xxs:flex-col xxs:space-y-5 xxs:justify-between xxs:items-center xxs:pb-16 flex justify-between">
                     <button
                     type="submit"
                     className="group flex items-center justify-between w-[120px] h-[55px] btn border-2 border-black rounded-lg p-4 cursor-pointer hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500"

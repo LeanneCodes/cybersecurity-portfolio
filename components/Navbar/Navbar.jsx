@@ -49,7 +49,7 @@ const Navbar = () => {
             width={248}
             height={64}
             priority
-            className="relative"
+            className="xxs:w-1/2 relative"
           />
         </Link>
 

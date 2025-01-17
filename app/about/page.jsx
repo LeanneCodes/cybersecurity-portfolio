@@ -7,7 +7,7 @@ import Labels from '@/components/Labels/Labels';
 
 const page = () => {
   return (
-    <div className='flex pt-10 pr-48 pb-[86px]'>
+    <div className='xxs:flex xxs:flex-col xxs:pr-0 flex pt-10 pr-48 pb-[86px]'>
         <div className='flex items-start flex-col w-1/2'>
             <Image
                 alt="Triangles with an image of Leanne"
@@ -15,10 +15,10 @@ const page = () => {
                 width={500}
                 height={500}
                 id="about_triangles"
-                className="relative left-0 top-0"
+                className="xxs:hidden sm:block relative left-0 top-0"
             />
         </div>
-        <div className='flex flex-col justify-around items-start w-1/2'>
+        <div className='xxs:w-4/5 xxs:mx-auto flex flex-col justify-around items-start w-1/2'>
             <div className='mb-10'>
                 <Image
                     src={"/logo.png"}
@@ -30,8 +30,8 @@ const page = () => {
             </div>
 
             <div className='flex flex-col w-full mb-10'>
-                <h1 className='mb-2 text-xl font-bold'>Skills:</h1>
-                <div className='flex gap-2 flex-wrap'>
+                <h1 className='xxs:text-center mb-2 text-xl font-bold'>Skills:</h1>
+                <div className='xxs:flex xxs:justify-center flex gap-2 flex-wrap'>
                     <Labels className="bg-lightGrey">Mobile</Labels>
                     <Labels className="bg-sage">App</Labels>
                     <Labels className="bg-moss text-white">React</Labels>
@@ -44,7 +44,7 @@ const page = () => {
                 </div>
             </div>
 
-            <div className='mb-10'>
+            <div className='xxs:mb-10 xxs:text-center'>
                 <p>
                 I’m a Junior Frontend Developer with 3 years of experience. Over the years, I’ve worked on a range of projects, including building display ad banners for various clients. This has honed my ability to create engaging, responsive designs while adhering to client specifications.<br/><br/>
 
@@ -54,7 +54,7 @@ const page = () => {
                 </p>
             </div>
 
-            <Link href="/projects">
+            <Link href="/projects" className='xxs:w-full xxs:mx-auto xxs:flex xxs:justify-center'>
                 <OutlineButton className="mb-10 text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
                     View Portfolio
                     <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />

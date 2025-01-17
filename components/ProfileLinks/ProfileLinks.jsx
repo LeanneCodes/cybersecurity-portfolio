@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const ProfileLinks = () => {
   return (
-    <ul className="flex flex-row gap-4">
+    <ul className="xxs:gap-2 flex flex-row gap-4">
         <Link href="https://github.com/LeanneCodes" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <li className="text-4xl hover:text-gray-400 transition-colors">
                 <FaGithub />

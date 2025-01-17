@@ -3,12 +3,31 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import useBackgroundEffect from "@/hooks/useBackgroundEffect";
 import emailjs from "emailjs-com";
 import ProfileLinks from '@/components/ProfileLinks/ProfileLinks';
+import { usePathname } from "next/navigation";
 
 const Page = () => {
-    useBackgroundEffect();
+    const pathname = usePathname();
+
+    useEffect(() => {
+        const body = document.querySelector("body");
+
+        if (pathname === "/contact") {
+        body.classList.remove("bg-faint-triangles");
+        body.classList.add("bg-blurred-triangles");
+        } else if (pathname === "/projects") {
+        body.classList.remove("bg-faint-triangles");
+        body.classList.remove("bg-blurred-triangles");
+        } else {
+        body.classList.add("bg-faint-triangles");
+        }
+
+        return () => {
+        body.classList.add("bg-faint-triangles");
+        body.classList.remove("bg-blurred-triangles");
+        };
+    }, [pathname]);
 
     // Initialize form state
     const [formData, setFormData] = useState({
@@ -18,9 +37,6 @@ const Page = () => {
         message: "",
     });
     const [status, setStatus] = useState(""); // Success or error message
-
-    // Effect for custom background change (optional)
-    useBackgroundEffect();
 
     // Handle input changes
     const handleInputChange = (e) => {

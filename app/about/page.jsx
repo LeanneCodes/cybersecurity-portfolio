@@ -4,22 +4,21 @@ import Link from 'next/link';
 import React from 'react'
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import Labels from '@/components/Labels/Labels';
-import ProfileLinks from '@/components/ProfileLinks/ProfileLinks';
 
 const page = () => {
   return (
-    <div className='flex pt-10 pr-72 pb-[86px]'>
-        <div className='flex items-start flex-col w-1/4'>
+    <div className='flex pt-10 pr-48 pb-[86px]'>
+        <div className='flex items-start flex-col w-1/2'>
             <Image
                 alt="Triangles with an image of Leanne"
                 src={"/about-photo.png"}
-                width={1000}
-                height={2000}
+                width={500}
+                height={500}
                 id="about_triangles"
-                className="relative left-0 top-4"
+                className="relative left-0 top-0"
             />
         </div>
-        <div className='flex flex-col justify-around items-start w-3/4'>
+        <div className='flex flex-col justify-around items-start w-1/2'>
             <div className='mb-10'>
                 <Image
                     src={"/logo.png"}
@@ -51,7 +50,7 @@ const page = () => {
 
                 I also interned at a startup in Luxembourg, where I developed applications that involved working with APIs and Postman. This experience helped me sharpen my problem-solving skills and deepened my understanding of how frontend interfaces interact with backend systems.<br/><br/>
 
-                I’ve successfully completed two bootcamps—one focused on <a href=''>full-stack development</a> and the other on frontend technologies. These certifications have strengthened my knowledge of HTML, CSS, JavaScript, and React, and I’m eager to keep learning and applying new skills in my work.
+                I’ve successfully completed two bootcamps—one focused on <a className='font-bold underline' title='View Certificate' href='https://www.credential.net/abe70729-0419-4049-a752-62b032d231eb#acc.dpTPKM1l' target='_blank'>full-stack development</a> and the other on <a className='font-bold underline' title='View Certificate' href='https://skillsbootcamp.credential.getsmarter.com/bc3bb14e-0986-4109-a16a-e1f9c5af4378#acc.WHKb8k6Z' target='_blank'>frontend technologies</a>. These certifications have strengthened my knowledge of HTML, CSS, JavaScript, and React, and I’m eager to keep learning and applying new skills in my work.
                 </p>
             </div>
 

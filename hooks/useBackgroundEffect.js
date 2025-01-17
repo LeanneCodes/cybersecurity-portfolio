@@ -1,4 +1,3 @@
-// src/hooks/useBackgroundEffect.js
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -8,10 +7,7 @@ const useBackgroundEffect = () => {
   useEffect(() => {
     const body = document.querySelector("body");
 
-    if (pathname === "/contact") {
-      body.classList.remove("bg-faint-triangles");
-      body.classList.add("bg-blurred-triangles");
-    } else if (pathname === "/projects") {
+    if (pathname === "/projects") {
       body.classList.remove("bg-faint-triangles");
       body.classList.remove("bg-blurred-triangles");
     } else {

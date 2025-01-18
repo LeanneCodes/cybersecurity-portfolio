@@ -95,26 +95,26 @@ const Page = () => {
     }, [status]);
 
     return (
-        <div className='xxs:flex xxs:flex-col xxs:px-0 xxs:pt-12 2xl:flex-row 2xl:pt-40 2xl:px-32 4xl:px-52 flex px-60 pt-36'>
+        <div className='xxs:flex xxs:flex-col xxs:px-0 xxs:pt-0 mx-auto 2xl:flex-row 2xl:px-32 4xl:px-52 flex'>
             <div className='xxs:w-4/5 xxs:mx-auto xxs:mb-20 w-1/2'>
                 <div>
                     <h1 className='xxs:text-[24px] xxs:text-center md:text-[32px] lg:text-[44px] 2xl:text-left font-bold'>Contact me!</h1>
                     <h2 className='xxs:text-[40px] xxs:text-center xxs:mt-[-10px] md:text-[52px] md:mt-[-18px] lg:text-[66px] lg:mt-[-28px] 2xl:text-left mt-[-25px] mb-10 font-bold'>Let's work...</h2>
 
-                    <p className='xxs:w-full xxs:text-center lg:text-[20px] 2xl:text-left 2xl:w-4/5 w-3/4 mb-10'>I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community and ecommerce for small businesses</p>
+                    <p className='xxs:w-full xxs:text-sm xxs:text-center md:text-[16px] 2xl:text-left 2xl:w-4/5 w-3/4 mb-10'>I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community and ecommerce for small businesses</p>
 
                     <div className='xxs:mb-10 xxs:flex xxs:justify-center 2xl:justify-start'>
                         <ProfileLinks />
                     </div>
 
-                    <h3 className='xxs:text-center lg:text-[20px] 2xl:text-left'><strong>Email:</strong> leannemgoldsmith@gmail.com</h3><br/>
-                    <h3 className='xxs:text-center lg:text-[20px] 2xl:text-left 2xl:mt-[-25px]'><strong>Mobile:</strong> 07496355196</h3>
+                    <h3 className='xxs:text-center xxs:text-sm md:text-[16px] 2xl:text-left'><strong>Email:</strong> leannemgoldsmith@gmail.com</h3><br/>
+                    <h3 className='xxs:text-center xxs:text-sm md:text-[16px] 2xl:text-left 2xl:mt-[-25px]'><strong>Mobile:</strong> 07496355196</h3>
                 </div>
             </div>
 
             {/* Right Section with Form */}
             <div className="xxs:w-4/5 xxs:px-0 xxs:mx-auto w-1/2 px-16">
-                <form className="space-y-10 lg:text-[20px]" onSubmit={handleSubmit}>
+                <form className="xxs:text-sm md:text-[16px] space-y-10" onSubmit={handleSubmit}>
                 <div>
                     <input
                     type="text"
@@ -163,10 +163,10 @@ const Page = () => {
                     ></textarea>
                 </div>
 
-                <div className="xxs:flex xxs:flex-col xxs:space-y-5 xxs:justify-between xxs:items-center xxs:pb-16 xs:space-y-10 2xl:flex-row 2xl:space-y-0 flex justify-between">
+                <div className="xxs:flex xxs:flex-col xxs:space-y-10 xxs:justify-between xxs:items-center xxs:pb-16 xs:space-y-10 2xl:flex-row 2xl:space-y-0 flex justify-between">
                     <button
                     type="submit"
-                    className="lg:text-[20px] lg:w-[130px] group flex items-center justify-between w-[120px] h-[55px] btn border-2 border-black rounded-lg p-4 cursor-pointer hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="md:text-[16px] lg:w-[130px] group flex items-center justify-between w-[120px] h-[55px] btn border-2 border-black rounded-lg p-4 cursor-pointer hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500"
                     >
                     Send
                     <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />

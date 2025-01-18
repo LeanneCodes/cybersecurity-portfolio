@@ -9,7 +9,7 @@ const DefaultFooter = () => {
       <div>
         <ProfileLinks />
       </div>
-      <div className='xxs:text-sm xxs:text-center xs:text-[16px] md:text-[20px]'>
+      <div className='xxs:text-[12px] xxs:px-4 xxs:text-center xs:text-sm md:text-[16px]'>
         Copyright, Leanne M. Goldsmith {currentYear}
       </div>
     </div>

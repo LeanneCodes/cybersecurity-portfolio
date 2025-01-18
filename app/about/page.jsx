@@ -7,7 +7,7 @@ import Labels from '@/components/Labels/Labels';
 
 const page = () => {
   return (
-    <div className='xxs:flex xxs:flex-col xxs:pr-0 xxs:pb-0 lg:pt-20 2xl:flex-row 2xl:pr-40 4xl:pt-10 flex pt-10 pr-48 pb-[86px]'>
+    <div className='xxs:pt-0 xxs:flex xxs:flex-col xxs:pr-0 xxs:pb-0 2xl:flex-row 2xl:pr-40 4xl:pt-10 flex pr-48 pb-[86px]'>
         <div className='2xl:justify-center 2xl:mt-[-60px] flex items-start flex-col w-1/2'>
             <Image
                 alt="Triangles with an image of Leanne"
@@ -25,13 +25,13 @@ const page = () => {
                     alt="Logo"
                     width={500}
                     height={64}
-                    className=""
+                    className="xs:w-3/5 xs:mx-auto lg:w-1/2"
                 />
             </div>
 
             <div className='flex flex-col w-full mb-10'>
                 <h1 className='xxs:text-center 2xl:text-left mb-2 text-xl font-bold'>Skills:</h1>
-                <div className='xxs:flex xxs:justify-center 2xl:justify-start flex gap-2 flex-wrap'>
+                <div className='xxs:text-sm xxs:flex xxs:justify-center 2xl:justify-start flex gap-2 flex-wrap'>
                     <Labels className="bg-lightGrey">Mobile</Labels>
                     <Labels className="bg-sage">App</Labels>
                     <Labels className="bg-moss text-white">React</Labels>
@@ -44,7 +44,7 @@ const page = () => {
                 </div>
             </div>
 
-            <div className='xxs:mb-10 xxs:text-center md:text-[20px] 2xl:text-left'>
+            <div className='xxs:mb-10 xxs:text-sm xxs:text-center md:text-[16px] 2xl:text-left'>
                 <p>
                 I’m a Junior Frontend Developer with 3 years of experience. Over the years, I’ve worked on a range of projects, including building display ad banners for various clients. This has honed my ability to create engaging, responsive designs while adhering to client specifications.<br/><br/>
 
@@ -55,7 +55,7 @@ const page = () => {
             </div>
 
             <Link href="/projects" className='xxs:w-full xxs:mx-auto xxs:flex xxs:justify-center 2xl:justify-start'>
-                <OutlineButton className="mb-10 text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
+                <OutlineButton className="xxs:w-[70%] xxs:mx-auto xxs:text-sm xxs:h-[50px] xs:w-[50%] sm:w-[38%] md:w-[32%] lg:w-1/4 xl:w-[20%] 2xl:w-[23%] mb-10 text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
                     View Portfolio
                     <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
                 </OutlineButton>

@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         className={`${montserrat.variable} antialiased min-h-screen flex flex-col object-cover bg-cover bg-center bg-no-repeat bg-faint-triangles`}
       >
         <Navbar />
-        <main className="xxs:mt-[-20px] xs:mt-[5px] sm:mt-[40px] md:mt-[60px] lg:mt-[40px] flex-grow w-full pt-[149px] pb-[100px]">
+        <main className="flex-grow w-full h-screen flex items-center pt-[149px] pb-[100px]">
           {children}
         </main>
         <Footer />

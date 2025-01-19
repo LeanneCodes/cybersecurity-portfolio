@@ -7,7 +7,7 @@ import Labels from '@/components/Labels/Labels';
 
 const page = () => {
   return (
-    <div className='xxs:pt-0 xxs:flex xxs:flex-col xxs:pr-0 xxs:pb-0 2xl:flex-row 2xl:pr-40 4xl:pt-10 flex pr-48 pb-[86px]'>
+    <div className='xxs:flex xxs:flex-col xxs:pr-0 xxs:mt-[500px] xs:mt-[300px] sm:mt-[200px] md:mt-[300px] lg:mt-[100px] xl:mt-[150px] 2xl:mt-[100px] 2xl:flex-row 2xl:pr-40 4xl:pt-10 flex pr-48 pb-[86px]'>
         <div className='2xl:justify-center 2xl:mt-[-60px] flex items-start flex-col w-1/2'>
             <Image
                 alt="Triangles with an image of Leanne"
@@ -25,7 +25,7 @@ const page = () => {
                     alt="Logo"
                     width={500}
                     height={64}
-                    className="xs:w-3/5 xs:mx-auto lg:w-1/2"
+                    className="xs:w-3/5 xs:mx-auto lg:w-1/2 2xl:ml-0"
                 />
             </div>
 
@@ -55,7 +55,7 @@ const page = () => {
             </div>
 
             <Link href="/projects" className='xxs:w-full xxs:mx-auto xxs:flex xxs:justify-center 2xl:justify-start'>
-                <OutlineButton className="xxs:w-[70%] xxs:mx-auto xxs:text-sm xxs:h-[50px] xs:w-[50%] sm:w-[38%] md:w-[32%] lg:w-1/4 xl:w-[20%] 2xl:w-[23%] mb-10 text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
+                <OutlineButton className="xxs:w-[70%] xxs:mx-auto xxs:text-sm xxs:h-[50px] xs:w-[50%] sm:w-[38%] md:w-[32%] lg:w-1/4 xl:w-[20%] 2xl:w-[23%] 2xl:ml-0 mb-10 text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
                     View Portfolio
                     <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
                 </OutlineButton>

@@ -95,11 +95,11 @@ const Page = () => {
     }, [status]);
 
     return (
-        <div className='xxs:flex xxs:flex-col xxs:px-0 xxs:pt-0 mx-auto 2xl:flex-row 2xl:px-32 4xl:px-52 flex'>
+        <div className='xxs:flex xxs:flex-col xxs:px-0 xxs:mt-[500px] xs:mt-[400px] md:mt-[450px] 2xl:mt-[100px] mx-auto 2xl:flex-row 2xl:px-32 4xl:px-52 pb-[86px]'>
             <div className='xxs:w-4/5 xxs:mx-auto xxs:mb-20 w-1/2'>
                 <div>
                     <h1 className='xxs:text-[24px] xxs:text-center md:text-[32px] lg:text-[44px] 2xl:text-left font-bold'>Contact me!</h1>
-                    <h2 className='xxs:text-[40px] xxs:text-center xxs:mt-[-10px] md:text-[52px] md:mt-[-18px] lg:text-[66px] lg:mt-[-28px] 2xl:text-left mt-[-25px] mb-10 font-bold'>Let's work...</h2>
+                    <h2 className='xxs:text-[36px] xxs:text-center xxs:mt-[-10px] md:text-[52px] md:mt-[-18px] lg:text-[66px] lg:mt-[-28px] 2xl:text-left mt-[-25px] mb-10 font-bold'>Let's work...</h2>
 
                     <p className='xxs:w-full xxs:text-sm xxs:text-center md:text-[16px] 2xl:text-left 2xl:w-4/5 w-3/4 mb-10'>I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community and ecommerce for small businesses</p>
 

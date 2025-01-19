@@ -6,7 +6,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 export default function Home() {
   return (
     <main
-      id="homepage" className="md:mt-[80px] lg:mt-[60px] 2xl:mt-[200px]"
+      id="homepage" className=""
     >
       <div>
         <Image
@@ -14,7 +14,7 @@ export default function Home() {
           alt="Logo"
           width={780}
           height={64}
-          className="xxs:w-4/5 xxs:mx-auto xs:w-3/5 lg:w-1/2 lg:ml-[100px] xl:mt-[80px] 4xl:w-2/5 4xl:ml-[200px] relative z-10"
+          className="xxs:w-4/5 xxs:mx-auto xs:w-3/5 lg:w-1/2 lg:ml-[100px] 4xl:w-2/5 4xl:ml-[200px] relative z-10"
         />
 
         <h1 className="xxs:w-4/5 xxs:mx-auto xxs:text-center xxs:text-sm xs:w-3/4 md:text-[16px] md:w-3/5 lg:text-left lg:ml-[100px] lg:w-1/2 2xl:w-1/2 mt-[50px] 4xl:ml-[200px] w-[40%] relative z-10 text-[20px]">

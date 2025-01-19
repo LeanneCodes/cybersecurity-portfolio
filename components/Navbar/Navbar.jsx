@@ -148,14 +148,14 @@ const Navbar = () => {
               Projects
             </li>
           </Link>
-          <Link href="/cv">
-            <li
-              onClick={handleNav}
+          <li>
+            <button
+              onClick={toggleCVModal}
               className="xxs:text-[16px] btn border-2 border-white rounded-lg p-4 text-[24px] w-full text-center hover:bg-white hover:text-black"
             >
               My CV
-            </li>
-          </Link>
+            </button>
+          </li>
           <Link href="/contact">
             <li
               onClick={handleNav}

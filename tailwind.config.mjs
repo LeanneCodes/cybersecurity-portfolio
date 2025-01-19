@@ -12,6 +12,7 @@ export default {
         'mob-faint-triangles': "url('/mobile-faint-triangles-bg.png')",
         'main-triangles': "url('/main-triangles.png')",
         'blurred-triangles': "url('/blurred-triangles.png')",
+        'blurred-mantel': "url('/blurred-mantel-bg.png')",
       },
       colors: {
         white: "#ffffff",

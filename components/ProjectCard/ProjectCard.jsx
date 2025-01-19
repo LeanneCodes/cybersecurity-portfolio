@@ -6,12 +6,14 @@ const ProjectCard = ({ image, title, desc, children }) => {
     <div className='flex justify-center'>
       <div className='flex flex-col border-2 rounded-lg w-[424px] h-[505px]'>
         {image && (
-          <div className="w-full h-[298px] relative mb-4">
+          <div className="w-full h-[298px] relative">
             <Image
               src={image}
               alt={title || "Project Image"}
-              layout="fill"
-              objectFit="cover"
+              width={500}
+              height={500}
+              className='w-full h-full object-cover bg-cover bg-center bg-no-repeat'
+              priority
             />
           </div>
         )}

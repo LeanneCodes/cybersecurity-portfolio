@@ -5,9 +5,15 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { usePathname } from "next/navigation";
+import CVModal from "../Modal/CVModal";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cvOpen, setCVOpen] = useState(false); // Modal state
+
+  const toggleCVModal = () => {
+    setCVOpen(!cvOpen);
+  };
 
   // Handle menu toggle
   const handleNav = () => {
@@ -47,13 +53,6 @@ const Navbar = () => {
   }, [menuOpen]);
 
   const pathname = usePathname(); // Get the current path
-
-  // Function to determine if the link is active or hovered
-  const getNavLinkClass = (linkPath) => {
-    return `relative py-2 px-4 group ${
-      pathname === linkPath || "group-hover"
-    }`;
-  };
 
   return (
     <nav className="fixed top-0 left-0 w-full h-[149px] bg-transparent z-[100]">
@@ -104,11 +103,16 @@ const Navbar = () => {
                 ></span>
               </Link>
             </li>
-            <Link href="/cv">
-              <li className="btn border-2 border-black rounded-lg p-4 text-sm 4xl:text-[20px] w-fit hover:bg-black hover:text-white hover:border-black">
+            
+            <li>
+              <button
+                onClick={toggleCVModal}
+                className="btn border-2 border-black rounded-lg p-4 text-sm 4xl:text-[20px] w-fit hover:bg-black hover:text-white hover:border-black"
+              >
                 My CV
-              </li>
-            </Link>
+              </button>
+            </li>
+            
             <Link href="/contact">
               <li className="btn border-2 border-black rounded-lg bg-black text-white p-4 text-sm 4xl:text-[20px] w-fit hover:bg-moss hover:border-moss hover:text-white">
                 Contact
@@ -162,6 +166,9 @@ const Navbar = () => {
           </Link>
         </ul>
       </div>
+
+      {/* CV Modal */}
+      <CVModal cvOpen={cvOpen} toggleCVModal={toggleCVModal} />
     </nav>
   );
 };

@@ -23,6 +23,7 @@ export default {
         darkGrey: "#182A2B",
         grey: "#686866",
         tan: "#D2BB99",
+        mediumGrey: "#D9D9D9",
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

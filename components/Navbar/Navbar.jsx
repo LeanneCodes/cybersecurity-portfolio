@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full h-[149px] bg-transparent z-[100]">
       {/* Top Navbar */}
-      <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 z-[101]">
+      <div className="flex flex-row justify-between items-center h-full w-full px-[60px] 2xl:px-16 relative z-[101]">
         {/* Logo */}
         <Link href="/" className="cursor-pointer md:w-1/3">
           <Image

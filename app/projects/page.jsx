@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import useBackgroundEffect from "@/hooks/useBackgroundEffect";
 import Image from 'next/image';
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
@@ -9,9 +9,6 @@ import Link from 'next/link';
 
 const page = () => {
   useBackgroundEffect();
-
-  // Track selected label for filtering
-  const [selectedLabel, setSelectedLabel] = useState('All');
 
   // Project data with unique images
   const projects = [
@@ -38,13 +35,20 @@ const page = () => {
       image: "/project4.png",
       desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
       labels: ["API", "JavaScript", "Gaming"]
+    },
+    {
+      title: "Project Five",
+      image: "/project5.png",
+      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
+      labels: ["Mobile", "React", "Gaming"]
+    },
+    {
+      title: "Project Six",
+      image: "/project4.png",
+      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
+      labels: ["API", "JavaScript", "Gaming"]
     }
   ];
-
-  // Filter the projects based on the selected label
-  const filteredProjects = selectedLabel === 'All' 
-    ? projects 
-    : projects.filter(project => project.labels.includes(selectedLabel));
 
   return (
     <div className='flex flex-col absolute top-[149px] w-full'>
@@ -64,12 +68,12 @@ const page = () => {
       {/* Project Cards */}
       <div className="relative max-h-fit w-full px-10 mx-auto mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-8 px-10 w-full justify-evenly items-center">
-          {filteredProjects.length === 0 ? (
+          {projects.length === 0 ? (
             <div>No projects found</div>
           ) : (
-            filteredProjects.map((project, index) => (
-              <Link href={`/projects/${index + 1}`} className='cursor-pointer'>
-                <ProjectCard key={index} image={project.image} title={project.title} desc={project.desc}>
+            projects.map((project, index) => (
+              <Link href={`/projects/${index + 1}`} className='cursor-pointer' key={index}>
+                <ProjectCard image={project.image} title={project.title} desc={project.desc}>
                   {project.labels.map((label, labelIndex) => (
                     <Labels key={labelIndex}>{label}</Labels>
                   ))}

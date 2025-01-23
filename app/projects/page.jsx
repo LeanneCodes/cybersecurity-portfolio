@@ -41,9 +41,6 @@ const page = () => {
     }
   ];
 
-  console.log(selectedLabel);
-
-
   // Filter the projects based on the selected label
   const filteredProjects = selectedLabel === 'All' 
     ? projects 
@@ -73,45 +70,9 @@ const page = () => {
             filteredProjects.map((project, index) => (
               <Link href={`/projects/${index + 1}`} className='cursor-pointer'>
                 <ProjectCard key={index} image={project.image} title={project.title} desc={project.desc}>
-                  {project.labels.map((label, labelIndex) => {
-                    // Determine label background dynamically
-                    let labelBg = '';
-                    switch (label) {
-                      case 'Mobile':
-                        labelBg = 'bg-lightGrey';
-                        break;
-                      case 'App':
-                        labelBg = 'bg-sage';
-                        break;
-                      case 'React':
-                        labelBg = 'bg-moss text-white';
-                        break;
-                      case 'Gaming':
-                        labelBg = 'bg-cream';
-                        break;
-                      case 'JavaScript':
-                        labelBg = 'bg-darkGrey text-white';
-                        break;
-                      case 'Tailwind':
-                        labelBg = 'bg-grey text-white';
-                        break;
-                      case 'API':
-                        labelBg = 'bg-tan';
-                        break;
-                      case 'Postman':
-                        labelBg = 'bg-lightGrey';
-                        break;
-                      default:
-                        labelBg = 'bg-darkGrey text-white';
-                        break;
-                    }
-
-                    return (
-                      <Labels key={labelIndex} className={labelBg}>
-                        {label}
-                      </Labels>
-                    );
-                  })}
+                  {project.labels.map((label, labelIndex) => (
+                    <Labels key={labelIndex}>{label}</Labels>
+                  ))}
                 </ProjectCard>
               </Link>
             ))

@@ -8,7 +8,7 @@ import Labels from '@/components/Labels/Labels';
 const page = () => {
   return (
     <div className='xxs:flex xxs:flex-col xxs:pr-0 absolute top-[149px] 2xl:flex-row 2xl:pr-40 4xl:pt-10 flex pr-48 pb-[86px]'>
-        <div className='2xl:justify-center 2xl:mt-[-60px] flex items-start flex-col w-1/2'>
+        <div className='2xl:justify-center flex items-start flex-col w-1/2'>
             <Image
                 alt="Triangles with an image of Leanne"
                 src={"/about-photo.png"}
@@ -18,6 +18,16 @@ const page = () => {
                 className="xxs:hidden 2xl:block 2xl:scale-125 2xl:left-[62px] relative left-0 top-0"
             />
         </div>
+        <div className='flex justify-center mb-10'>
+            <Image
+                alt="Image of Leanne"
+                src={"/leanne-img.png"}
+                width={500}
+                height={500}
+                id="leanne-img"
+                className="rounded-full xxs:w-[175px] md:w-[200px] lg:w-[250px] xxs:block 2xl:hidden"
+            />
+        </div>
         <div className='xxs:w-4/5 xxs:mx-auto flex flex-col justify-around items-start w-1/2'>
             <div className='mb-10 md:w-full md:flex md:justify-center 2xl:justify-start'>
                 <Image
@@ -25,7 +35,7 @@ const page = () => {
                     alt="Logo"
                     width={500}
                     height={64}
-                    className="xs:w-3/5 xs:mx-auto lg:w-1/2 2xl:ml-0"
+                    className="xs:w-3/5 xs:mx-auto lg:w-1/3 2xl:ml-0"
                 />
             </div>
 
@@ -55,7 +65,7 @@ const page = () => {
             </div>
 
             <Link href="/projects" className='xxs:w-full xxs:mx-auto xxs:flex xxs:justify-center 2xl:justify-start'>
-                <OutlineButton className="xxs:w-[70%] xxs:mx-auto xxs:text-sm xxs:h-[50px] xs:w-[50%] sm:w-[38%] md:w-[32%] lg:w-1/4 xl:w-[20%] 2xl:w-[23%] 2xl:ml-0 mb-10 text-[20px] bg-white h-[60px] w-[230px] flex justify-around items-center relative z-10 group">
+                <OutlineButton className="xxs:mx-auto xxs:text-sm xxs:h-[50px] 2xl:ml-0 mb-10 text-[20px] bg-white h-[60px] w-[200px] flex justify-around items-center relative z-10 group">
                     View Portfolio
                     <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
                 </OutlineButton>

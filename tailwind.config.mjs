@@ -13,6 +13,7 @@ export default {
         'main-triangles': "url('/main-triangles.png')",
         'blurred-triangles': "url('/blurred-triangles.png')",
         'blurred-mantel': "url('/blurred-mantel-bg.png')",
+        'blurred-mantel-project': "url('/blurred-mantel-project-bg.png')",
       },
       colors: {
         white: "#ffffff",

@@ -7,7 +7,7 @@ const useBackgroundEffect = () => {
   useEffect(() => {
     const body = document.querySelector("body");
 
-    if (pathname === "/projects") {
+    if (pathname.includes("/projects")) {
       body.classList.remove("bg-faint-triangles");
       body.classList.remove("bg-blurred-triangles");
     } else {

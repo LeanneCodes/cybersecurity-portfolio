@@ -9,6 +9,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 import { HiOutlineArrowUp } from "react-icons/hi2";
 import Labels from "@/components/Labels/Labels";
+import { RxDoubleArrowDown } from "react-icons/rx";
 
 const ProjectDetailsPage = () => {
     useBackgroundEffect();
@@ -175,7 +176,7 @@ const ProjectDetailsPage = () => {
             {/* Project header and content */}
             <div className="bg-blurred-mantel-project bg-cover object-cover bg-no-repeat bg-top bg-fixed flex flex-col justify-center items-center w-full mt-[-149px] lg:h-[709px] relative">
                 <div className="w-full h-full mt-[149px]">
-                    <div className="xxs:w-full md:w-4/5 md:mx-auto h-full flex justify-around items-center">
+                    <div className="w-full h-full flex justify-around items-center">
                         <div>
                             <OutlineButton
                                 onClick={handlePrev}
@@ -212,6 +213,26 @@ const ProjectDetailsPage = () => {
                                     GitHub Link
                                 </Link>
                             </div>
+
+                            <Link href="/" onClick={(e) => {
+                                e.preventDefault(); // Prevent default link behaviour
+
+                                // Get the element and calculate the scroll position
+                                const targetElement = document.getElementById('content-start');
+                                if (targetElement) {
+                                    const offset = 149; // Adjust this value to fine-tune the final position
+                                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                                    window.scrollTo({
+                                        top: elementPosition - offset, // Subtract the offset to prevent over-scrolling
+                                        behavior: 'smooth',
+                                    });
+                                }
+                            }}>
+                                <div className="flex justify-center items-center text-2xl mt-10 animate-bounce">
+                                    <RxDoubleArrowDown />
+                                </div>
+                            </Link>
+                            
                         </div>
 
                         <div>
@@ -248,7 +269,7 @@ const ProjectDetailsPage = () => {
             </div>
 
             {/* Project sections */}
-            <div className="lg:mt-0 h-fit w-full flex xxs:flex-col md:flex-row justify-center items-center">
+            <div id="content-start" className="lg:mt-0 h-fit w-full flex xxs:flex-col md:flex-row justify-center items-center">
                 <div className="xxs:w-full xxs:flex-col lg:w-1/2 lg:flex-row flex justify-center items-center">
                     <div
                         style={{

@@ -69,10 +69,11 @@ const page = () => {
 
   return (
     <div className='flex flex-col top-[149px] w-full'>
-      {/* Carousel */}
       <div className='bg-blurred-mantel bg-cover object-cover bg-no-repeat bg-bottom bg-fixed flex flex-col justify-center items-center w-full h-[450px] relative'>
-        <div className='w-full h-full flex justify-around items-center'>
-          <div>
+        
+        {/* Carousel */}
+        <div className='xxs:w-4/5 lg:w-full h-full flex justify-around items-center'>
+          <div className="xxs:hidden md:block">
             <OutlineButton onClick={handlePrev}
             disabled={currentIndex === 0}
             className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
@@ -83,19 +84,20 @@ const page = () => {
           </div>
 
           {/* Main content */}
-          <Link href={`/projects/${currentIndex + 1}`} className='cursor-pointer w-3/4 flex justify-center'>
-            <div className='w-[65%] gap-8 flex'>
+          <Link href={`/projects/${currentIndex + 1}`} className='cursor-pointer xxs:w-full lg:w-3/4 xl:w-1/2 flex justify-center'>
+            <div className='xxs:w-full md:w-[90%] xxs:gap-0 sm:p-10 lg:gap-8 md:p-0 flex'>
               <div>
                 <Image
                   alt={projects[currentIndex].title}
                   src={projects[currentIndex].image}
                   width={600}
                   height={600}
+                  className='xxs:hidden lg:block'
                 />
               </div>
-              <div className='flex flex-col justify-around'>
-                <h1 className='font-bold text-6xl'>{projects[currentIndex].title}</h1>
-                <p>{projects[currentIndex].desc}</p>
+              <div className='flex flex-col justify-around xxs:items-center lg:items-start'>
+                <h1 className='font-bold text-6xl xxs:mb-4 xxs:text-center lg:text-left lg:mb-0'>{projects[currentIndex].title}</h1>
+                <p className='xxs:text-center lg:text-left'>{projects[currentIndex].desc}</p>
                 <div className="flex gap-2 mt-4">
                   {projects[currentIndex].labels.map((label, labelIndex) => (
                     <Labels key={labelIndex}>{label}</Labels>
@@ -105,7 +107,7 @@ const page = () => {
             </div>
           </Link>
 
-          <div>
+          <div className="xxs:hidden md:block">
             <OutlineButton onClick={handleNext}
             disabled={currentIndex === projects.length - 1}
             className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
@@ -145,8 +147,8 @@ const page = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="relative max-h-fit w-full px-10 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-8 px-10 w-full justify-evenly items-center">
+      <div className="relative max-h-fit w-full xxs:px-0 md:px-10 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-8 xxs:px-5 md:px-10 w-full justify-evenly items-center">
           {projects.length === 0 ? (
             <div>No projects found</div>
           ) : (

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import useBackgroundEffect from "@/hooks/useBackgroundEffect";
 import Link from "next/link";
 import OutlineButton from "@/components/Buttons/OutlineButton";
@@ -13,35 +13,11 @@ import Labels from "@/components/Labels/Labels";
 const ProjectDetailsPage = () => {
     useBackgroundEffect();
 
-    const { id } = useParams(); // Get the project ID from the pathname
-    const projectId = parseInt(id); // Convert it to a number
-
+    const { id } = useParams();
+    const router = useRouter();
+    const initialIndex = parseInt(id) - 1; // Convert id to index (0-based)
+    const [currentIndex, setCurrentIndex] = useState(initialIndex); // Dynamic current index
     const [visible, setVisible] = useState(false);
-
-    const toggleVisible = () => {
-        const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 300) {
-            setVisible(true);
-        } else if (scrolled <= 300) {
-            setVisible(false);
-        }
-    };
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", toggleVisible);
-        
-        // Cleanup the event listener when component unmounts
-        return () => {
-            window.removeEventListener("scroll", toggleVisible);
-        };
-    }, []);
 
     // Array of project details
     const projectGameDetails = [
@@ -137,8 +113,52 @@ const ProjectDetailsPage = () => {
         },
     ];
 
-    // Find the project with the matching ID
-    const project = projectGameDetails.find((project) => project.id === projectId);
+    const handleNext = () => {
+        if (currentIndex < projectGameDetails.length - 1) {
+            setCurrentIndex((prevIndex) => prevIndex + 1);
+        }
+    };
+    
+    const handlePrev = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex((prevIndex) => prevIndex - 1);
+        }
+    };    
+
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        setVisible(scrolled > 300);
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", toggleVisible);
+        return () => {
+            window.removeEventListener("scroll", toggleVisible);
+        };
+    }, []);
+
+    useEffect(() => {
+        // Sync currentIndex with URL when it changes
+        router.push(`/projects/${currentIndex + 1}`);
+    }, [currentIndex, router]);
+
+    useEffect(() => {
+        // Update currentIndex when URL changes
+        if (id) {
+            const index = parseInt(id) - 1;
+            setCurrentIndex(index);
+        }
+    }, [id]);
+
+    const project = projectGameDetails[currentIndex]; // Get project dynamically
+    const projectId = projectGameDetails[currentIndex].id
 
     // Handle case where the project isn't found
     if (!project) {
@@ -153,32 +173,78 @@ const ProjectDetailsPage = () => {
     return (
         <div className="flex flex-col absolute top-0 w-full">
             {/* Project header and content */}
-            <div className="bg-blurred-mantel-project bg-cover object-cover bg-no-repeat bg-top bg-fixed flex justify-center items-center w-full h-[709px] relative">
-                <div className="text-center w-1/2">
-                    <h1 className="font-montserrat font-bold text-[62px]">{project.title}</h1>
-                    <h2 className="w-full">{project.description}</h2>
-                    
-                    <div className="mb-10 mt-3 flex flex-row justify-center gap-5 w-full">
-                        {project.labels.split(",").map((label, index) => {
-                            const labelText = label.trim();
-                            return (
-                                <Labels key={index}>
-                                    {labelText}
-                                </Labels>
-                            );
-                        })}
-                    </div>
+            <div className="bg-blurred-mantel-project bg-cover object-cover bg-no-repeat bg-top bg-fixed flex flex-col justify-center items-center w-full h-[709px] relative">
+                <div className="w-full h-full mt-[149px]">
+                    <div className="w-full h-full flex justify-around items-center">
+                        <div>
+                            <OutlineButton
+                                onClick={handlePrev}
+                                disabled={currentIndex === 0}
+                                className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
+                                    currentIndex === 0 ? "opacity-50 pointer-events-none" : ""
+                                }`}
+                            >
+                                <HiOutlineArrowLongLeft />
+                            </OutlineButton>
+                        </div>
 
-                    <div>
-                        <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" className="hover:font-bold">
-                            Live Link
-                        </Link>{" "}
-                        |{" "}
-                        <Link href={project.gitHub} target="_blank" rel="noopener noreferrer" className="hover:font-bold">
-                            GitHub Link
-                        </Link>
+                        <div className="text-center w-1/2">
+                            <h1 className="font-montserrat font-bold text-[62px]">{project.title}</h1>
+                            <h2 className="w-full">{project.description}</h2>
+                            
+                            <div className="mb-10 mt-3 flex flex-row justify-center gap-5 w-full">
+                                {project.labels.split(",").map((label, index) => {
+                                    const labelText = label.trim();
+                                    return (
+                                        <Labels key={index}>
+                                            {labelText}
+                                        </Labels>
+                                    );
+                                })}
+                            </div>
+
+                            <div>
+                                <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" className="hover:font-bold">
+                                    Live Link
+                                </Link>{" "}
+                                |{" "}
+                                <Link href={project.gitHub} target="_blank" rel="noopener noreferrer" className="hover:font-bold">
+                                    GitHub Link
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div>
+                            <OutlineButton
+                                onClick={handleNext}
+                                disabled={currentIndex === projectGameDetails.length - 1}
+                                className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
+                                    currentIndex === projectGameDetails.length - 1
+                                        ? "opacity-50 pointer-events-none"
+                                        : ""
+                                }`}
+                            >
+                                <HiOutlineArrowLongRight />
+                            </OutlineButton>
+                        </div>
                     </div>
                 </div>
+
+                {/* Active bar indicator */}
+                <div className="h-[149px] mb-[100px] flex justify-center items-center space-x-2">
+                    {projectGameDetails.map((_, index) => (
+                        <div
+                        key={index}
+                        onClick={() => setCurrentIndex(index)}
+                        className={`h-2 w-6 rounded-full ${
+                            currentIndex === index
+                            ? "bg-white w-14"
+                            : "bg-white opacity-50 hover:bg-gray-500"
+                        }`}
+                        ></div>
+                    ))}
+                </div>
+                
             </div>
 
             {/* Project sections */}

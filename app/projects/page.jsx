@@ -56,14 +56,16 @@ const page = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+    if (currentIndex < projects.length - 1) {
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    );
-  };
+      if (currentIndex > 0) {
+          setCurrentIndex((prevIndex) => prevIndex - 1);
+      }
+  };   
 
   return (
     <div className='flex flex-col absolute top-[149px] w-full'>
@@ -71,7 +73,11 @@ const page = () => {
       <div className='bg-blurred-mantel bg-cover object-cover bg-no-repeat bg-bottom bg-fixed flex flex-col justify-center items-center w-full h-[450px] relative'>
         <div className='w-full h-full flex justify-around items-center'>
           <div>
-            <OutlineButton onClick={handlePrev} className="border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white">
+            <OutlineButton onClick={handlePrev}
+            disabled={currentIndex === 0}
+            className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
+                currentIndex === 0 ? "opacity-50 pointer-events-none" : ""
+            }`}>
               <HiOutlineArrowLongLeft /> 
             </OutlineButton>
           </div>
@@ -83,8 +89,8 @@ const page = () => {
                 <Image
                   alt={projects[currentIndex].title}
                   src={projects[currentIndex].image}
-                  width={500}
-                  height={500}
+                  width={600}
+                  height={600}
                 />
               </div>
               <div className='flex flex-col justify-around'>
@@ -100,7 +106,13 @@ const page = () => {
           </Link>
 
           <div>
-            <OutlineButton onClick={handleNext} className="border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white">
+            <OutlineButton onClick={handleNext}
+            disabled={currentIndex === projects.length - 1}
+            className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
+                currentIndex === projects.length - 1
+                    ? "opacity-50 pointer-events-none"
+                    : ""
+            }`}>
               <HiOutlineArrowLongRight /> 
             </OutlineButton>
           </div>

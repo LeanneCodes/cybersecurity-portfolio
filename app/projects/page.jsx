@@ -1,11 +1,14 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import useBackgroundEffect from "@/hooks/useBackgroundEffect";
 import Image from 'next/image';
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import Labels from '@/components/Labels/Labels';
 import Link from 'next/link';
+import { HiOutlineArrowLongLeft } from "react-icons/hi2";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import OutlineButton from '@/components/Buttons/OutlineButton';
 
 const page = () => {
   useBackgroundEffect();
@@ -50,13 +53,77 @@ const page = () => {
     }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <div className='flex flex-col absolute top-[149px] w-full'>
       {/* Carousel */}
-      <div className='bg-blurred-mantel bg-cover object-cover bg-no-repeat bg-bottom bg-fixed flex justify-center items-center w-full h-[560px] relative'>Mantel Carousel</div>
+      <div className='bg-blurred-mantel bg-cover object-cover bg-no-repeat bg-bottom bg-fixed flex flex-col justify-center items-center w-full h-[450px] relative'>
+        <div className='w-full h-full flex justify-around items-center'>
+          <div>
+            <OutlineButton onClick={handlePrev} className="border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white">
+              <HiOutlineArrowLongLeft /> 
+            </OutlineButton>
+          </div>
 
-      {/* Portfolio Imager */}
-      <div className='h-[150px] flex justify-center items-center relative'>
+          {/* Main content */}
+          <Link href={`/projects/${currentIndex + 1}`} className='cursor-pointer w-3/4 flex justify-center'>
+            <div className='w-[65%] gap-8 flex'>
+              <div>
+                <Image
+                  alt={projects[currentIndex].title}
+                  src={projects[currentIndex].image}
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div className='flex flex-col justify-around'>
+                <h1 className='font-bold text-6xl'>{projects[currentIndex].title}</h1>
+                <p>{projects[currentIndex].desc}</p>
+                <div className="flex gap-2 mt-4">
+                  {projects[currentIndex].labels.map((label, labelIndex) => (
+                    <Labels key={labelIndex}>{label}</Labels>
+                  ))}
+              </div>
+              </div>
+            </div>
+          </Link>
+
+          <div>
+            <OutlineButton onClick={handleNext} className="border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white">
+              <HiOutlineArrowLongRight /> 
+            </OutlineButton>
+          </div>
+        </div>
+
+        {/* Active bar indicator */}
+        <div className="h-[50px] flex justify-center items-center space-x-2">
+          {projects.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`h-2 w-6 rounded-full ${
+                currentIndex === index
+                  ? "bg-white w-14"
+                  : "bg-white opacity-50 hover:bg-gray-500"
+              }`}
+            ></div>
+          ))}
+        </div>
+      </div>
+
+      {/* Portfolio Image */}
+      <div className='h-[200px] flex justify-center items-center relative'>
         <Image
           alt='Portfolio Logo'
           src={"/portfolio-logo.png"}

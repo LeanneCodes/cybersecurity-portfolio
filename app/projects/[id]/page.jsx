@@ -170,11 +170,11 @@ const ProjectDetailsPage = () => {
                     </div>
 
                     <div>
-                        <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                        <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" className="hover:font-bold">
                             Live Link
                         </Link>{" "}
                         |{" "}
-                        <Link href={project.gitHub} target="_blank" rel="noopener noreferrer">
+                        <Link href={project.gitHub} target="_blank" rel="noopener noreferrer" className="hover:font-bold">
                             GitHub Link
                         </Link>
                     </div>
@@ -245,7 +245,7 @@ const ProjectDetailsPage = () => {
                 )}
             </div>
 
-            <div className="w-full flex flex-row justify-between px-40 mb-44">
+            <div className="w-full flex flex-row justify-between items-center px-40 mb-44">
                 {/* Previous Button */}
                 <div>
                     <Link
@@ -256,7 +256,7 @@ const ProjectDetailsPage = () => {
                         }`}
                     >
                         <OutlineButton
-                            className="xxs:mx-auto xxs:text-sm xxs:h-[50px] 2xl:ml-0 mb-10 text-[20px] bg-white h-[60px] w-[200px] flex justify-around items-center relative z-10 group"
+                            className="xxs:mx-auto xxs:text-sm xxs:h-[50px] 2xl:ml-0 text-[20px] bg-white h-[60px] w-[200px] flex justify-around items-center relative z-10 group"
                         >
                             <HiOutlineArrowLongLeft className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
                             Previous Project
@@ -289,7 +289,7 @@ const ProjectDetailsPage = () => {
                         }`}
                     >
                         <OutlineButton
-                            className="xxs:mx-auto xxs:text-sm xxs:h-[50px] 2xl:mr-0 mb-10 text-[20px] bg-white h-[60px] w-[200px] flex justify-around items-center relative z-10 group"
+                            className="xxs:mx-auto xxs:text-sm xxs:h-[50px] 2xl:mr-0 text-[20px] bg-white h-[60px] w-[200px] flex justify-around items-center relative z-10 group"
                         >
                             Next Project
                             <HiOutlineArrowLongRight className="text-4xl transition-transform duration-300 group-hover:translate-x-2" />
@@ -300,7 +300,7 @@ const ProjectDetailsPage = () => {
 
             {/* Scroll to Top Button */}
             <button 
-                className={`absolute right-6 bottom-28 rounded-full bg-white border-2 border-black hover:bg-black hover:text-white p-4 ${visible ? 'block' : 'hidden'}`}
+                className={`absolute right-14 bottom-44 rounded-full bg-white border-2 border-black hover:bg-black hover:text-white p-3 ${visible ? 'block' : 'hidden'}`}
                 onClick={scrollToTop}
             >
                 <HiOutlineArrowUp className="text-2xl" />

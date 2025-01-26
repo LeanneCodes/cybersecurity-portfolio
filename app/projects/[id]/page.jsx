@@ -173,14 +173,14 @@ const ProjectDetailsPage = () => {
     return (
         <div className="flex flex-col top-0 w-full">
             {/* Project header and content */}
-            <div className="bg-blurred-mantel-project bg-cover object-cover bg-no-repeat bg-top bg-fixed flex flex-col justify-center items-center w-full h-[709px] relative">
+            <div className="bg-blurred-mantel-project bg-cover object-cover bg-no-repeat bg-top bg-fixed flex flex-col justify-center items-center w-full mt-[-149px] lg:h-[709px] relative">
                 <div className="w-full h-full mt-[149px]">
-                    <div className="w-full h-full flex justify-around items-center">
+                    <div className="xxs:w-full md:w-4/5 md:mx-auto h-full flex justify-around items-center">
                         <div>
                             <OutlineButton
                                 onClick={handlePrev}
                                 disabled={currentIndex === 0}
-                                className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
+                                className={`xxs:hidden md:block border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
                                     currentIndex === 0 ? "opacity-50 pointer-events-none" : ""
                                 }`}
                             >
@@ -188,8 +188,8 @@ const ProjectDetailsPage = () => {
                             </OutlineButton>
                         </div>
 
-                        <div className="text-center w-1/2">
-                            <h1 className="font-montserrat font-bold text-[62px]">{project.title}</h1>
+                        <div className="text-center xxs:w-full xxs:space-y-5 xxs:p-5 lg:p-0 lg:mt-0 lg:w-1/2">
+                            <h1 className="font-montserrat font-bold xxs:text-[44px] md:text-[50px] xl:text-[62px]">{project.title}</h1>
                             <h2 className="w-full">{project.description}</h2>
                             
                             <div className="mb-10 mt-3 flex flex-row justify-center gap-5 w-full">
@@ -218,7 +218,7 @@ const ProjectDetailsPage = () => {
                             <OutlineButton
                                 onClick={handleNext}
                                 disabled={currentIndex === projectGameDetails.length - 1}
-                                className={`border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
+                                className={`xxs:hidden md:block border-darkGrey text-darkGrey text-4xl py-1 hover:bg-darkGrey hover:text-white ${
                                     currentIndex === projectGameDetails.length - 1
                                         ? "opacity-50 pointer-events-none"
                                         : ""
@@ -231,14 +231,14 @@ const ProjectDetailsPage = () => {
                 </div>
 
                 {/* Active bar indicator */}
-                <div className="h-[149px] mb-[100px] flex justify-center items-center space-x-2">
+                <div className="h-[149px] flex justify-center items-center space-x-2">
                     {projectGameDetails.map((_, index) => (
                         <div
                         key={index}
                         onClick={() => setCurrentIndex(index)}
                         className={`h-2 w-6 rounded-full ${
                             currentIndex === index
-                            ? "bg-white w-14"
+                            ? "bg-white w-12"
                             : "bg-white opacity-50 hover:bg-gray-500"
                         }`}
                         ></div>
@@ -248,8 +248,8 @@ const ProjectDetailsPage = () => {
             </div>
 
             {/* Project sections */}
-            <div className="h-[880px] w-full flex xxs:flex-col md:flex-row justify-center items-center">
-                <div className="w-1/2 flex justify-center items-center">
+            <div className="lg:mt-0 h-fit w-full flex xxs:flex-col md:flex-row justify-center items-center">
+                <div className="xxs:w-full xxs:flex-col lg:w-1/2 lg:flex-row flex justify-center items-center">
                     <div
                         style={{
                             backgroundImage: project.imageOne,
@@ -258,16 +258,17 @@ const ProjectDetailsPage = () => {
                             height: "880px",
                             width: "100%",
                         }}
+                        className="xxs:h-[300px!important] sm:h-[500px!important] md:w-[400px!important] md:h-[400px!important] lg:h-[600px!important] lg:w-[100%!important]"
                     />
                 </div>
-                <div className="w-1/2 flex flex-col justify-center items-start p-40">
+                <div className="xxs:w-full lg:w-1/2 flex flex-col justify-center items-start xxs:p-5 lg:p-16 2xl:p-40">
                     <h3 className="font-montserrat font-bold text-[30px] mb-5">The Purpose of this Project</h3>
                     {project.contentOne}
                 </div>
             </div>
 
-            <div className="h-[880px] w-full flex xxs:flex-col md:flex-row-reverse justify-center items-center">
-                <div className="w-1/2 flex justify-center items-center">
+            <div className="lg:mt-0 h-fit w-full flex xxs:flex-col md:flex-row-reverse justify-center items-center">
+                <div className="xxs:w-full xxs:flex-col lg:w-1/2 lg:flex-row flex justify-center items-center">
                     <div
                         style={{
                             backgroundImage: project.imageTwo,
@@ -276,15 +277,16 @@ const ProjectDetailsPage = () => {
                             height: "880px",
                             width: "100%",
                         }}
+                        className="xxs:h-[300px!important] sm:h-[500px!important] md:w-[400px!important] md:h-[400px!important] lg:h-[600px!important] lg:w-[100%!important]"
                     />
                 </div>
-                <div className="w-1/2 flex flex-col justify-center items-start p-40">
+                <div className="xxs:w-full lg:w-1/2 flex flex-col justify-center items-start xxs:p-5 lg:p-16 2xl:p-40">
                     <h3 className="font-montserrat font-bold text-[30px] mb-5">The Technical Implementation</h3>
                     {project.contentTwo}
                 </div>
             </div>
 
-            <div className="flex flex-col w-full h-[400px] p-40">
+            <div className="flex flex-col w-full xxs:h-[200px] lg:h-[400px] xxs:p-5 lg:p-40">
                 <h3 className="font-montserrat font-bold text-[30px] mb-5">The Results & Impact</h3>
                 {project.contentThree}
             </div>
@@ -298,13 +300,14 @@ const ProjectDetailsPage = () => {
                 }}
             />
 
-            <div className="w-full h-fit py-20 px-40 flex flex-col justify-center items-center">
+            {/* Video */}
+            <div className="w-full h-fit xxs:p-5 lg:py-10 lg:px-20 xl:py-20 xl:px-40 flex flex-col justify-center items-center">
                 <h3 className="font-montserrat font-bold text-[30px] text-center mb-5">{project.title} Demo</h3>
                 {project.video && (
                     <iframe
                         src={project.video}
                         title="Project Video Demo"
-                        className="w-full"
+                        className="w-full xxs:h-[200px] xs:h-[300px] md:h-[400px] lg:h-[500px] 2xl:h-[700px]"
                         height={800}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -312,9 +315,9 @@ const ProjectDetailsPage = () => {
                 )}
             </div>
 
-            <div className="w-full flex flex-row justify-between items-center px-40">
+            <div className="w-full flex flex-row xxs:justify-center md:justify-between items-center xxs:px-5 lg:px-40">
                 {/* Previous Button */}
-                <div>
+                <div className="xxs:hidden md:block">
                     <Link
                         href={projectId === 1 ? "#" : `/projects/${projectId - 1}`}
                         onClick={(e) => projectId === 1 && e.preventDefault()} // Prevent navigation for the first project
@@ -347,7 +350,7 @@ const ProjectDetailsPage = () => {
                 </div>
 
                 {/* Next Button */}
-                <div>
+                <div className="xxs:hidden md:block">
                     <Link
                         href={projectId === projectGameDetails.length ? "#" : `/projects/${projectId + 1}`}
                         onClick={(e) => projectId === projectGameDetails.length && e.preventDefault()} // Prevent navigation for the last project
@@ -367,7 +370,7 @@ const ProjectDetailsPage = () => {
 
             {/* Scroll to Top Button */}
             <button 
-                className={`absolute right-14 bottom-0 rounded-full bg-white border-2 border-black hover:bg-black hover:text-white p-3 ${visible ? 'block' : 'hidden'}`}
+                className={`xxs:hidden lg:block absolute right-14 bottom-0 rounded-full bg-white border-2 border-black hover:bg-black hover:text-white p-3 ${visible ? 'block' : 'hidden'}`}
                 onClick={scrollToTop}
             >
                 <HiOutlineArrowUp className="text-2xl" />

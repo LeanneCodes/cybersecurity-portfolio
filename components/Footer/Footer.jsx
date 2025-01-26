@@ -33,7 +33,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="z-[101]">
+    <div className="z-[101] w-full">
       {isHomepage && showHomeFooter ? <HomeFooter /> : <DefaultFooter />}
     </div>
   );

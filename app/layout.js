@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${montserrat.variable} antialiased min-h-screen flex flex-col object-cover bg-cover bg-center bg-no-repeat bg-fixed bg-faint-triangles`}
+        className={`${montserrat.variable} antialiased min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed bg-faint-triangles`}
       >
         <Navbar />
-        <main className="flex-grow w-full h-screen flex items-center pt-[149px] pb-[100px]">
+        <main className="flex w-full pt-[149px] mb-12">
           {children}
         </main>
         <Footer />

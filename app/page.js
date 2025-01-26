@@ -6,7 +6,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 export default function Home() {
   return (
     <main
-      id="homepage" className=""
+      id="homepage" className="flex flex-col justify-center"
     >
       <div>
         <Image

@@ -4,7 +4,7 @@ import ProfileLinks from '../ProfileLinks/ProfileLinks';
 const HomeFooter = () => {
 
   return (
-    <div className="fixed bottom-0 w-full bg-transparent h-[86px] text-black flex flex-row justify-end items-center px-[60px]">
+    <div className="w-full bg-transparent h-[86px] text-black flex flex-row justify-end items-center px-[60px]">
       <div>
         <ProfileLinks />
       </div>

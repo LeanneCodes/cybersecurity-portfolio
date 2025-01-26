@@ -68,7 +68,7 @@ const page = () => {
   };   
 
   return (
-    <div className='flex flex-col absolute top-[149px] w-full'>
+    <div className='flex flex-col top-[149px] w-full'>
       {/* Carousel */}
       <div className='bg-blurred-mantel bg-cover object-cover bg-no-repeat bg-bottom bg-fixed flex flex-col justify-center items-center w-full h-[450px] relative'>
         <div className='w-full h-full flex justify-around items-center'>
@@ -145,7 +145,7 @@ const page = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="relative max-h-fit w-full px-10 mx-auto mb-32">
+      <div className="relative max-h-fit w-full px-10 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-8 px-10 w-full justify-evenly items-center">
           {projects.length === 0 ? (
             <div>No projects found</div>

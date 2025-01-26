@@ -95,7 +95,7 @@ const Page = () => {
     }, [status]);
 
     return (
-        <div className='xxs:flex xxs:flex-col xxs:px-0 absolute top-[149px] w-full mx-auto 2xl:h-[75%] 2xl:flex-row 2xl:justify-center 2xl:items-center 2xl:px-32 2xl:py-0 4xl:px-52 pb-[86px]'>
+        <div className='xxs:flex xxs:flex-col xxs:px-0 w-full mx-auto 2xl:mt-[100px] 2xl:h-[75%] 2xl:flex-row 2xl:justify-center 2xl:items-center 2xl:px-32 2xl:py-0 4xl:px-52 pb-[86px]'>
             <div className='xxs:w-4/5 xxs:mx-auto xxs:mb-20 w-1/2'>
                 <div>
                     <h1 className='xxs:text-[24px] xxs:text-center md:text-[32px] lg:text-[44px] 2xl:text-left font-bold'>Contact me!</h1>

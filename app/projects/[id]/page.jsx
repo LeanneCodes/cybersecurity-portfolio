@@ -171,7 +171,7 @@ const ProjectDetailsPage = () => {
     }
 
     return (
-        <div className="flex flex-col absolute top-0 w-full">
+        <div className="flex flex-col top-0 w-full">
             {/* Project header and content */}
             <div className="bg-blurred-mantel-project bg-cover object-cover bg-no-repeat bg-top bg-fixed flex flex-col justify-center items-center w-full h-[709px] relative">
                 <div className="w-full h-full mt-[149px]">
@@ -298,20 +298,21 @@ const ProjectDetailsPage = () => {
                 }}
             />
 
-            <div className="w-full h-[1000px] p-40">
+            <div className="w-full h-fit py-20 px-40 flex flex-col justify-center items-center">
                 <h3 className="font-montserrat font-bold text-[30px] text-center mb-5">{project.title} Demo</h3>
                 {project.video && (
                     <iframe
                         src={project.video}
                         title="Project Video Demo"
-                        className="w-full h-full"
+                        className="w-full"
+                        height={800}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
                 )}
             </div>
 
-            <div className="w-full flex flex-row justify-between items-center px-40 mb-44">
+            <div className="w-full flex flex-row justify-between items-center px-40">
                 {/* Previous Button */}
                 <div>
                     <Link
@@ -366,7 +367,7 @@ const ProjectDetailsPage = () => {
 
             {/* Scroll to Top Button */}
             <button 
-                className={`absolute right-14 bottom-44 rounded-full bg-white border-2 border-black hover:bg-black hover:text-white p-3 ${visible ? 'block' : 'hidden'}`}
+                className={`absolute right-14 bottom-0 rounded-full bg-white border-2 border-black hover:bg-black hover:text-white p-3 ${visible ? 'block' : 'hidden'}`}
                 onClick={scrollToTop}
             >
                 <HiOutlineArrowUp className="text-2xl" />

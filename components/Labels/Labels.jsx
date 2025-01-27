@@ -34,7 +34,7 @@ const Labels = ({ children }) => {
   }
 
   return (
-    <div className={`rounded-full border-none px-4 py-2 text-[14px] ${labelBg}`}>
+    <div className={`rounded-full border-none px-4 py-2 text-[14px] skill-label ${labelBg}`}>
       {children}
     </div>
   );

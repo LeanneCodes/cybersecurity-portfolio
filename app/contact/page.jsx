@@ -6,9 +6,15 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import emailjs from "emailjs-com";
 import ProfileLinks from '@/components/ProfileLinks/ProfileLinks';
 import { usePathname } from "next/navigation";
+import { leftAnimate, rightAnimate } from '@/utils/gsapAnimations';
 
 const Page = () => {
     const pathname = usePathname();
+
+    useEffect(() => {
+        leftAnimate("left-section");
+        rightAnimate("right-section");
+    }, []);
 
     useEffect(() => {
         const body = document.querySelector("body");
@@ -96,7 +102,7 @@ const Page = () => {
 
     return (
         <div className='xxs:flex xxs:flex-col xxs:px-0 w-full mx-auto 2xl:mt-[100px] 2xl:h-[75%] 2xl:flex-row 2xl:justify-center 2xl:items-center 2xl:px-32 2xl:py-0 4xl:px-52 pb-[86px]'>
-            <div className='xxs:w-4/5 xxs:mx-auto xxs:mb-20 w-1/2'>
+            <div className='left-section xxs:w-4/5 xxs:mx-auto xxs:mb-20 w-1/2'>
                 <div>
                     <h1 className='xxs:text-[24px] xxs:text-center md:text-[32px] lg:text-[44px] 2xl:text-left font-bold'>Contact me!</h1>
                     <h2 className='xxs:text-[36px] xxs:text-center xxs:mt-[-10px] md:text-[52px] md:mt-[-18px] lg:text-[66px] lg:mt-[-28px] 2xl:text-left mt-[-25px] mb-10 font-bold'>Let's work...</h2>
@@ -113,7 +119,7 @@ const Page = () => {
             </div>
 
             {/* Right Section with Form */}
-            <div className="xxs:w-4/5 xxs:px-0 xxs:mx-auto w-1/2 px-16">
+            <div className="right-section xxs:w-4/5 xxs:px-0 xxs:mx-auto w-1/2 px-16">
                 <form className="xxs:text-sm md:text-[16px] space-y-10" onSubmit={handleSubmit}>
                 <div>
                     <input

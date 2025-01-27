@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 
 const ProjectCard = ({ image, title, desc, children }) => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center project-card'>
       <div className='flex flex-col border-2 border-mediumGrey rounded-lg w-[424px] h-fit bg-mediumGrey'>
         {image && (
           <div className="w-full h-[298px] relative">

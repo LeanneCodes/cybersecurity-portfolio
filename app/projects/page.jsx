@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useBackgroundEffect from "@/hooks/useBackgroundEffect";
 import Image from 'next/image';
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
@@ -9,9 +9,14 @@ import Link from 'next/link';
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import OutlineButton from '@/components/Buttons/OutlineButton';
+import { animateElements, animateProjectCards, projectCardScroll } from '@/utils/gsapAnimations';
 
 const page = () => {
   useBackgroundEffect();
+
+  useEffect(() => {
+    animateProjectCards("project-card"); // Trigger scroll animations for project cards
+  }, []);
 
   // Project data with unique images
   const projects = [

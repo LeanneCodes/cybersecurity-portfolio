@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { Analytics } from "@vercel/analytics/react"
 
 // Import Montserrat font
 const montserrat = Montserrat({
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex w-full pt-[149px] mb-12">
           {children}
+          <Analytics />
         </main>
         <Footer />
       </body>

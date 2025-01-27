@@ -27,6 +27,7 @@ const page = () => {
                     height={500}
                     id="about_triangles"
                     className="xxs:hidden 2xl:block 2xl:scale-125 2xl:left-[62px] relative left-0 top-0"
+                    priority
                 />
             </div>
             <div className='flex justify-center mb-10'>
@@ -37,6 +38,7 @@ const page = () => {
                     height={500}
                     id="leanne-img"
                     className="rounded-full xxs:w-[175px] md:w-[200px] lg:w-[250px] xxs:block 2xl:hidden"
+                    priority
                 />
             </div>
             <div className='xxs:w-4/5 xxs:mx-auto flex flex-col justify-around items-start w-1/2'>
@@ -47,6 +49,7 @@ const page = () => {
                         width={500}
                         height={64}
                         className="xs:w-3/5 xs:mx-auto lg:w-1/3 2xl:ml-0"
+                        priority
                     />
                 </div>
 

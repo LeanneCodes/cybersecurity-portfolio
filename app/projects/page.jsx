@@ -98,6 +98,7 @@ const page = () => {
                   width={600}
                   height={600}
                   className='xxs:hidden lg:block'
+                  priority
                 />
               </div>
               <div className='flex flex-col justify-around xxs:items-center lg:items-start'>
@@ -148,6 +149,7 @@ const page = () => {
           src={"/portfolio-logo.png"}
           width={200}
           height={200}
+          priority
         />
       </div>
 

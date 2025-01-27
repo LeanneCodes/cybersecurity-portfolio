@@ -183,6 +183,7 @@ const Page = () => {
                         src={"/portfolio-logo.png"}
                         width={200}
                         height={100}
+                        priority
                     />
                 </div>
 

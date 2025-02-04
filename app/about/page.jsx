@@ -68,8 +68,8 @@ const page = () => {
                     </div>
                 </div>
 
-                <div className='xxs:mb-10 xxs:text-sm xxs:text-center md:text-[16px] 2xl:text-left'>
-                    <p>
+                <div className='xxs:mb-10 xxs:text-sm md:text-[16px]'>
+                    <p className='text-left'>
                     I’m a Junior Frontend Developer with 3 years of experience. Over the years, I’ve worked on a range of projects, including building display ad banners for various clients. This has honed my ability to create engaging, responsive designs while adhering to client specifications.<br/><br/>
 
                     I also interned at a startup based in Luxembourg, where I developed applications that involved working with APIs and Postman. This experience helped me sharpen my problem-solving skills and deepened my understanding of how frontend interfaces interact with backend systems.<br/><br/>

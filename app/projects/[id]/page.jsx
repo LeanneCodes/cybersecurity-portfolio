@@ -24,7 +24,7 @@ const ProjectDetailsPage = () => {
     const projectGameDetails = [
         {
             id: 1,
-            title: "Project Title 1",
+            title: "Game Sync",
             description: "This is the description for Project 1.",
             labels: "Mobile, App, React",
             liveLink: "https://www.google.com",
@@ -39,7 +39,7 @@ const ProjectDetailsPage = () => {
         },
         {
             id: 2,
-            title: "Project Title 2",
+            title: "Banner Ads",
             description: "This is the description for Project 2.",
             labels: "React, Tailwind",
             liveLink: "https://example.com",
@@ -54,7 +54,7 @@ const ProjectDetailsPage = () => {
         },
         {
             id: 3,
-            title: "Project Title 3",
+            title: "Spellbound",
             description: "This is the description for Project 3.",
             labels: "Gaming, Tailwind",
             liveLink: "https://www.google.com",
@@ -69,7 +69,7 @@ const ProjectDetailsPage = () => {
         },
         {
             id: 4,
-            title: "Project Title 4",
+            title: "Silke",
             description: "This is the description for Project 4.",
             labels: "JavaScript, API, React",
             liveLink: "https://example.com",
@@ -84,7 +84,7 @@ const ProjectDetailsPage = () => {
         },
         {
             id: 5,
-            title: "Project Title 5",
+            title: "Budget App",
             description: "This is the description for Project 5.",
             labels: "Gaming, Tailwind",
             liveLink: "https://www.google.com",
@@ -99,7 +99,7 @@ const ProjectDetailsPage = () => {
         },
         {
             id: 6,
-            title: "Project Title 6",
+            title: "Password Generator",
             description: "This is the description for Project 6.",
             labels: "JavaScript, API, React",
             liveLink: "https://example.com",

@@ -21,38 +21,38 @@ const page = () => {
   // Project data with unique images
   const projects = [
     {
-      title: "Project One",
+      title: "Game Sync",
       image: "/project1.png",
       desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
       labels: ["Mobile", "App", "React"]
     },
     {
-      title: "Project Two",
+      title: "Banner Ads",
       image: "/project2.png",
       desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
       labels: ["Mobile", "App", "Gaming"]
     },
     {
-      title: "Project Three",
+      title: "Spellbound",
       image: "/project3.png",
       desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
       labels: ["Mobile", "React", "Gaming"]
     },
     {
-      title: "Project Four",
+      title: "Silke",
       image: "/project4.png",
       desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
       labels: ["API", "JavaScript", "Gaming"]
     },
     {
-      title: "Project Five",
+      title: "Budget App",
       image: "/project5.png",
       desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
       labels: ["Mobile", "React", "Gaming"]
     },
     {
-      title: "Project Six",
-      image: "/project4.png",
+      title: "Password Generator",
+      image: "/project6.png",
       desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
       labels: ["API", "JavaScript", "Gaming"]
     }

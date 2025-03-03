@@ -21,40 +21,58 @@ const page = () => {
   // Project data with unique images
   const projects = [
     {
+      title: "Ecommerce",
+      image: "/project2.png",
+      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
+      labels: ["MongoDB", "Express", "NextJs", "Photoshop", "GSAP", "JavaScript", "API", "Tailwind"]
+    },
+    {
       title: "Game Sync",
       image: "/project1.png",
-      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-      labels: ["Mobile", "App", "React"]
+      desc: "A web application designed to help users connect with friends and schedule times in their calendar to play games.",
+      labels: ["React", "Gaming", "Tailwind", "API", "HTML", "AdobeXD"]
     },
     {
       title: "Banner Ads",
       image: "/project2.png",
-      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-      labels: ["Mobile", "App", "Gaming"]
+      desc: "Showcasing a variety of display ad banners I build for esteemed clients, such as, Eurostar, Jet2, Nationwide, Jameson, Morrisons and more.",
+      labels: ["Mobile", "Desktop", "GSAP", "JavaScript", "CSS", "HTML", "React"]
     },
     {
       title: "Spellbound",
       image: "/project3.png",
-      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-      labels: ["Mobile", "React", "Gaming"]
+      desc: "A website that displays the current bestselling books based on the New York Times API. ",
+      labels: ["NextJs", "Tailwind", "JavaScript", "Figma", "API", "MongoDB"]
     },
     {
       title: "Silke",
       image: "/project4.png",
-      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-      labels: ["API", "JavaScript", "Gaming"]
+      desc: "Using the OpenWeather api data to see if getting a silk press will survive the dew point.",
+      labels: ["React", "Tailwind", "HTML", "API", "JavaScript"]
+    },
+    {
+      title: "Oyster & Beyond Blog",
+      image: "/project8.png",
+      desc: "A travel blog that allows for diary entries and comments using a headless CMS.",
+      labels: ["React", "Tailwind", "HTML", "API", "JavaScript", "HeadlessCMS", "MongoDB"]
     },
     {
       title: "Budget App",
       image: "/project5.png",
-      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-      labels: ["Mobile", "React", "Gaming"]
+      desc: "A basic React app that shows the user how much money they have leftover after inputting their budget and expenses.",
+      labels: ["React", "CSS", "Bootstrap", "JavaScript"]
     },
     {
       title: "Password Generator",
       image: "/project6.png",
-      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-      labels: ["API", "JavaScript", "Gaming"]
+      desc: "A password generator that takes in inputs from the user, which helps to create simple to complex passwords.",
+      labels: ["HTML", "CSS", "JavaScript", "Figma"]
+    },
+    {
+      title: "ReadMe Generator",
+      image: "/project7.png",
+      desc: "Using NodeJs to create a ReadMe based on the user answering questions in the terminal.",
+      labels: ["NodeJs", "VSCode"]
     }
   ];
 
@@ -91,7 +109,7 @@ const page = () => {
           {/* Main content */}
           <Link href={`/projects/${currentIndex + 1}`} className='cursor-pointer xxs:w-full lg:w-3/4 xl:w-1/2 flex justify-center'>
             <div className='xxs:w-full md:w-[90%] xxs:gap-0 sm:p-10 lg:gap-8 md:p-0 flex'>
-              <div>
+              <div className='w-1/3'>
                 <Image
                   alt={projects[currentIndex].title}
                   src={projects[currentIndex].image}
@@ -101,10 +119,10 @@ const page = () => {
                   priority
                 />
               </div>
-              <div className='flex flex-col justify-around xxs:items-center lg:items-start'>
+              <div className='flex flex-col justify-around xxs:items-center lg:items-start w-2/3 space-y-4'>
                 <h1 className='font-bold text-6xl xxs:mb-4 xxs:text-center lg:text-left lg:mb-0'>{projects[currentIndex].title}</h1>
                 <p className='xxs:text-center lg:text-left'>{projects[currentIndex].desc}</p>
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 flex-wrap">
                   {projects[currentIndex].labels.map((label, labelIndex) => (
                     <Labels key={labelIndex}>{label}</Labels>
                   ))}

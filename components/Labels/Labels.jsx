@@ -17,7 +17,7 @@ const Labels = ({ children }) => {
       labelBg = 'bg-cream';
       break;
     case 'JavaScript':
-      labelBg = 'bg-darkGrey text-white';
+      labelBg = 'bg-cream';
       break;
     case 'Tailwind':
       labelBg = 'bg-grey text-white';
@@ -27,6 +27,51 @@ const Labels = ({ children }) => {
       break;
     case 'Postman':
       labelBg = 'bg-lightGrey';
+      break;
+    case 'HTML':
+      labelBg = 'bg-cream';
+      break;
+    case 'CSS':
+      labelBg = 'bg-sage';
+      break;
+    case 'Ecommerce':
+      labelBg = 'bg-grey text-white';
+      break;
+    case 'NextJs':
+      labelBg = 'bg-tan';
+      break;
+    case 'NodeJs':
+      labelBg = 'bg-lightGrey';
+      break;
+    case 'TypeScript':
+      labelBg = 'bg-cream';
+      break;
+    case 'GSAP':
+      labelBg = 'bg-darkGrey text-white';
+      break;
+    case 'Framer Motion':
+      labelBg = 'bg-grey text-white';
+      break;
+    case 'Figma':
+      labelBg = 'bg-lightGrey';
+      break;
+    case 'Photoshop':
+      labelBg = 'bg-lightGrey';
+      break;
+    case 'AdobeXD':
+      labelBg = 'bg-tan';
+      break;
+    case 'Desktop':
+      labelBg = 'bg-darkGrey text-white';
+      break;
+    case 'MangoDB':
+      labelBg = 'bg-lightGrey';
+      break;
+    case 'Express':
+      labelBg = 'bg-tan';
+      break;
+    case 'HeadlessCMS':
+      labelBg = 'bg-darkGrey text-white';
       break;
     default:
       labelBg = 'bg-darkGrey text-white';

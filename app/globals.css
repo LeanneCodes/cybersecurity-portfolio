@@ -28,3 +28,7 @@ main {
   position: relative;
 }
 
+p {
+  white-space: pre-line;
+}
+

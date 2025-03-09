@@ -10,6 +10,7 @@ import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 import { HiOutlineArrowUp } from "react-icons/hi2";
 import Labels from "@/components/Labels/Labels";
 import { RxDoubleArrowDown } from "react-icons/rx";
+import ReactMarkdown from "react-markdown";
 
 const ProjectDetailsPage = () => {
     useBackgroundEffect();
@@ -39,6 +40,36 @@ const ProjectDetailsPage = () => {
         },
         {
             id: 2,
+            title: "Spellbound",
+            description: "A website that displays the current bestselling books based on the New York Times API.",
+            labels: "NextJs, Tailwind, JavaScript, Figma, API, MongoDB",
+            liveLink: "https://spellbound-smoky.vercel.app/",
+            gitHub: "https://github.com/LeanneCodes/spellbound",
+            imageOne: "url('/spellbound-img1.png')",
+            contentOne: `Spellbound is a web application designed to showcase the best-selling books ranked by The New York Times.\n
+            It provides users with an easy and engaging way to explore books, authors, and categories from the NYT Best Seller list. 
+            Whether users are looking for their next great read or simply curious about current literary trends, Spellbound makes book discovery effortless.\n
+            The platform allows users to browse the latest best-sellers, search for specific titles or authors, and filter books by category. 
+            To keep readers updated, it includes notifications whenever the list is refreshed.\n
+            Additionally, Spellbound offers personalised book recommendations based on user interests, enhancing engagement and making the browsing experience more interactive.`,
+            
+            imageTwo: "url('/spellbound-img2.png')",
+            contentTwo: `Spellbound is built using modern web technologies and integrates multiple APIs to deliver up-to-date book information.\n
+            The key technical components include:\n
+            -New York Times Books API: Retrieves real-time best-seller data to ensure book listings remain current.\n
+            -MongoDB Database: Stores and manages book data efficiently, with automatic updates every 24 hours to prevent excessive API requests.\n
+            -Open Library API: Provides additional details about authors, including biographies and other published works.\n
+            The application also features an intuitive navigation bar, a powerful search function, and interactive modals that display detailed book and author information in a visually appealing way.`,
+            
+            contentThree: `Spellbound enhances the reading experience by making best-seller lists easily accessible and regularly updated.\n
+            By presenting book data in a structured and engaging format, it helps users discover new books quickly and efficiently.\n
+            Looking ahead, there is potential to expand Spellbound by incorporating links to global book retailers, allowing users to purchase books directly from their preferred stores.\n
+            Additionally, enhancing author pages with more in-depth bibliographies and related works would further enrich the platform, making it a valuable resource for book lovers worldwide.`,
+            
+            video: "/videos/spellbound-demo.mp4",
+        },                                    
+        {
+            id: 3,
             title: "Game Sync",
             description: "A web application designed to help users connect with friends and schedule times in their calendar to play games.",
             labels: "React, Gaming, Tailwind, API, HTML, AdobeXD",
@@ -48,42 +79,11 @@ const ProjectDetailsPage = () => {
             contentOne: "Game Sync is a web application designed to help gamers coordinate play sessions with friends. The idea is to make it easier for users to find common free time, reducing the frustration of trying to organise gaming sessions via scattered messages and unreliable schedules.",
             imageTwo: "url('/project1.png')",
             contentTwo: "Built using React, the app leverages APIs to integrate with external calendar services, allowing users to sync their availability seamlessly. Tailwind CSS ensures a sleek and responsive interface, while Adobe XD was used to design an intuitive user experience before development began.",
-            imageThree: "url('/project1.png')",
             contentThree: "This project solves a common issue for gamers by making scheduling effortless. In a real-world scenario, this app could evolve into a full-fledged social platform for gamers, integrating chat features, matchmaking, and notifications to enhance the experience further.",
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 3,
-            title: "Banner Ads",
-            description: "Showcasing a variety of display ad banners I build for esteemed clients, such as, Eurostar, Jet2, Nationwide, Jameson, Morrisons and more.",
-            labels: "Mobile, Desktop, GSAP, JavaScript, CSS, HTML, React",
-            liveLink: "https://banner-ads.netlify.app/",
-            gitHub: "https://github.com/LeanneCodes/banner-demo",
-            imageOne: "url('/project2.png')",
-            contentOne: "Banner Ads is a collection of high-quality display advertisements created for well-known brands. These ads are designed to engage users and drive conversions by combining compelling visuals with smooth animations and interactive elements.",
-            imageTwo: "url('/project2.png')",
-            contentTwo: "This project utilises GSAP for dynamic animations, ensuring seamless transitions and eye-catching effects. JavaScript, HTML, and CSS are used to build the banners, optimising them for both mobile and desktop platforms while maintaining performance and accessibility.",
-            imageThree: "url('/project2.png')",
-            contentThree: "In a real-world setting, this project showcases expertise in frontend development for digital marketing, demonstrating the ability to create high-impact visual content that effectively communicates brand messages and enhances user engagement.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
-        },
-        {
             id: 4,
-            title: "Spellbound",
-            description: "A website that displays the current bestselling books based on the New York Times API.",
-            labels: "NextJs, Tailwind, JavaScript, Figma, API, MongoDB",
-            liveLink: "https://spellbound-smoky.vercel.app/",
-            gitHub: "https://github.com/LeanneCodes/spellbound",
-            imageOne: "url('/project3.png')",
-            contentOne: "Spellbound is a platform that provides users with real-time updates on the bestselling books using the New York Times API. It aims to make book discovery easy by displaying curated lists of trending books.",
-            imageTwo: "url('/project3.png')",
-            contentTwo: "The project leverages Next.js for server-side rendering, ensuring fast loading times. Tailwind CSS provides a clean UI, while JavaScript handles API requests to fetch and display book data dynamically.",
-            imageThree: "url('/project3.png')",
-            contentThree: "In the real world, this platform helps readers stay updated on top books effortlessly. It could evolve into a fully functional book recommendation engine with user reviews and reading lists.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
-        },
-        {
-            id: 5,
             title: "Silke",
             description: "Using the OpenWeather API data to see if getting a silk press will survive the dew point.",
             labels: "React, Tailwind, HTML, API, JavaScript",
@@ -93,12 +93,11 @@ const ProjectDetailsPage = () => {
             contentOne: "Silke is a unique project that uses weather data to help individuals decide whether their silk press will hold up against the elements. The tool provides real-time weather analysis, focusing on humidity and dew points that impact hair longevity.",
             imageTwo: "url('/project4.png')",
             contentTwo: "Built with React and Tailwind CSS, Silke leverages the OpenWeather API to fetch accurate forecasts. The intuitive UI presents users with easy-to-understand recommendations based on their location and hair type.",
-            imageThree: "url('/project4.png')",
             contentThree: "Silke serves as a helpful resource for those navigating hair care in different climates. In the future, it could expand to include personalised recommendations and integrations with hair care brands for tailored product suggestions.",
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 6,
+            id: 5,
             title: "Oyster & Beyond Blog",
             description: "A travel blog that allows for diary entries and comments using a headless CMS.",
             labels: "React, Tailwind, HTML, API, JavaScript, HeadlessCMS, MongoDB",
@@ -108,8 +107,21 @@ const ProjectDetailsPage = () => {
             contentOne: "Oyster & Beyond Blog is a platform for travellers to document their journeys, share diary entries, and engage with a community through comments. The project leverages a headless CMS to provide a seamless content management experience.",
             imageTwo: "url('/project8.png')",
             contentTwo: "The blog is built using React for dynamic interactivity, Tailwind CSS for styling, and APIs to fetch and manage content. Users can easily create and edit posts while interacting with other travellers.",
-            imageThree: "url('/project8.png')",
             contentThree: "In the real world, this project serves as a foundation for a scalable content platform. It could evolve into a more feature-rich application with multimedia support, user profiles, and integrations with travel services.",
+            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+        },
+        {
+            id: 6,
+            title: "Banner Ads",
+            description: "Showcasing a variety of display ad banners I build for esteemed clients, such as, Eurostar, Jet2, Nationwide, Jameson, Morrisons and more.",
+            labels: "Mobile, Desktop, GSAP, JavaScript, CSS, HTML, React",
+            liveLink: "https://banner-ads.netlify.app/",
+            gitHub: "https://github.com/LeanneCodes/banner-demo",
+            imageOne: "url('/project2.png')",
+            contentOne: "Banner Ads is a collection of high-quality display advertisements created for well-known brands. These ads are designed to engage users and drive conversions by combining compelling visuals with smooth animations and interactive elements.",
+            imageTwo: "url('/project2.png')",
+            contentTwo: "This project utilises GSAP for dynamic animations, ensuring seamless transitions and eye-catching effects. JavaScript, HTML, and CSS are used to build the banners, optimising them for both mobile and desktop platforms while maintaining performance and accessibility.",
+            contentThree: "In a real-world setting, this project showcases expertise in frontend development for digital marketing, demonstrating the ability to create high-impact visual content that effectively communicates brand messages and enhances user engagement.",
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
@@ -123,7 +135,6 @@ const ProjectDetailsPage = () => {
             contentOne: "Budget App is a simple and effective tool for tracking finances. Users can input their income and expenses to calculate their remaining budget, making personal finance management more accessible.",
             imageTwo: "url('/project5.png')",
             contentTwo: "The app is built with React for smooth UI interactions, Bootstrap for styling, and JavaScript for handling dynamic budget calculations. Its minimalist design ensures ease of use.",
-            imageThree: "url('/project5.png')",
             contentThree: "In the real world, this app can help users maintain financial discipline. Future enhancements could include data visualisation, savings goals tracking, and bank account integrations.",
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
@@ -138,7 +149,6 @@ const ProjectDetailsPage = () => {
             contentOne: "Password Generator is a tool designed to create secure passwords based on user preferences. Users can specify length, character types, and complexity to generate strong, unique passwords.",
             imageTwo: "url('/project6.png')",
             contentTwo: "The project is built using JavaScript for password logic, HTML for structure, and CSS for a clean and simple UI. Figma was used to design an intuitive interface that ensures a seamless user experience.",
-            imageThree: "url('/project6.png')",
             contentThree: "This tool enhances online security by helping users create strong passwords. Future improvements could include password storage options and integrations with password managers.",
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
@@ -153,7 +163,6 @@ const ProjectDetailsPage = () => {
             contentOne: "ReadMe Generator is a Node.js-based tool that generates professional README files based on user input. It streamlines the process of creating documentation for projects.",
             imageTwo: "url('/project7.png')",
             contentTwo: "The project runs in the terminal, prompting users for details about their project and formatting the input into a structured README file.",
-            imageThree: "url('/project7.png')",
             contentThree: "This tool saves time for developers by automating README creation. Future features could include custom templates and markdown previews.",
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         }
@@ -330,7 +339,7 @@ const ProjectDetailsPage = () => {
                 </div>
                 <div className="xxs:w-full lg:w-1/2 flex flex-col justify-center items-start xxs:p-5 lg:p-16 2xl:p-40">
                     <h3 className="font-montserrat font-bold text-[30px] mb-5">The Purpose of this Project</h3>
-                    {project.contentOne}
+                    <p>{project.contentOne}</p>
                 </div>
             </div>
 
@@ -349,23 +358,14 @@ const ProjectDetailsPage = () => {
                 </div>
                 <div className="xxs:w-full lg:w-1/2 flex flex-col justify-center items-start xxs:p-5 lg:p-16 2xl:p-40">
                     <h3 className="font-montserrat font-bold text-[30px] mb-5">The Technical Implementation</h3>
-                    {project.contentTwo}
+                    <p>{project.contentTwo}</p>
                 </div>
             </div>
 
-            <div className="flex flex-col w-full xxs:h-[200px] lg:h-[400px] xxs:p-5 lg:p-40">
-                <h3 className="font-montserrat font-bold text-[30px] mb-5">The Results & Potential</h3>
-                {project.contentThree}
+            <div className="flex flex-col w-full h-fit xxs:p-5 lg:p-16">
+                <h3 className="font-montserrat font-bold text-[30px] mb-5">Results & Future Potential</h3>
+                <p>{project.contentThree}</p>
             </div>
-
-            <div
-                className="w-full h-[300px]"
-                style={{
-                    backgroundImage: project.imageThree,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-            />
 
             {/* Video */}
             <div className="w-full h-fit xxs:p-5 lg:py-10 lg:px-20 xl:py-20 xl:px-40 flex flex-col justify-center items-center">
@@ -374,7 +374,7 @@ const ProjectDetailsPage = () => {
                     <iframe
                         src={project.video}
                         title="Project Video Demo"
-                        className="w-full xxs:h-[200px] xs:h-[300px] md:h-[400px] lg:h-[500px] 2xl:h-[700px]"
+                        className="w-[80%] mx-auto xxs:h-[200px] xs:h-[300px] md:h-[400px] lg:h-[500px] 2xl:h-[700px]"
                         height={800}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen

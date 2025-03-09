@@ -27,22 +27,16 @@ const page = () => {
       labels: ["MongoDB", "Express", "NextJs", "Photoshop", "GSAP", "JavaScript", "API", "Tailwind"]
     },
     {
-      title: "Game Sync",
-      image: "/project1.png",
-      desc: "A web application designed to help users connect with friends and schedule times in their calendar to play games.",
-      labels: ["React", "Gaming", "Tailwind", "API", "HTML", "AdobeXD"]
-    },
-    {
-      title: "Banner Ads",
-      image: "/project2.png",
-      desc: "Showcasing a variety of display ad banners I build for esteemed clients, such as, Eurostar, Jet2, Nationwide, Jameson, Morrisons and more.",
-      labels: ["Mobile", "Desktop", "GSAP", "JavaScript", "CSS", "HTML", "React"]
-    },
-    {
       title: "Spellbound",
       image: "/project3.png",
       desc: "A website that displays the current bestselling books based on the New York Times API. ",
       labels: ["NextJs", "Tailwind", "JavaScript", "Figma", "API", "MongoDB"]
+    },
+    {
+      title: "Game Sync",
+      image: "/project1.png",
+      desc: "A web application designed to help users connect with friends and schedule times in their calendar to play games.",
+      labels: ["React", "Gaming", "Tailwind", "API", "HTML", "AdobeXD"]
     },
     {
       title: "Silke",
@@ -55,6 +49,12 @@ const page = () => {
       image: "/project8.png",
       desc: "A travel blog that allows for diary entries and comments using a headless CMS.",
       labels: ["React", "Tailwind", "HTML", "API", "JavaScript", "HeadlessCMS", "MongoDB"]
+    },
+    {
+      title: "Banner Ads",
+      image: "/project2.png",
+      desc: "Showcasing a variety of display ad banners I build for esteemed clients, such as, Eurostar, Jet2, Nationwide, Jameson, Morrisons and more.",
+      labels: ["Mobile", "Desktop", "GSAP", "JavaScript", "CSS", "HTML", "React", "Photoshop"]
     },
     {
       title: "Budget App",

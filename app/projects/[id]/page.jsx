@@ -80,7 +80,7 @@ const ProjectDetailsPage = () => {
             imageTwo: "url('/project1.png')",
             contentTwo: "Built using React, the app leverages APIs to integrate with external calendar services, allowing users to sync their availability seamlessly. Tailwind CSS ensures a sleek and responsive interface, while Adobe XD was used to design an intuitive user experience before development began.",
             contentThree: "This project solves a common issue for gamers by making scheduling effortless. In a real-world scenario, this app could evolve into a full-fledged social platform for gamers, integrating chat features, matchmaking, and notifications to enhance the experience further.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+            video: "/videos/gamesync.mp4",
         },
         {
             id: 3,
@@ -94,7 +94,7 @@ const ProjectDetailsPage = () => {
             imageTwo: "url('/project4.png')",
             contentTwo: "Built with React and Tailwind CSS, Silke leverages the OpenWeather API to fetch accurate forecasts. The intuitive UI presents users with easy-to-understand recommendations based on their location and hair type.",
             contentThree: "Silke serves as a helpful resource for those navigating hair care in different climates. In the future, it could expand to include personalised recommendations and integrations with hair care brands for tailored product suggestions.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+            video: "/videos/silke.mp4",
         },
         {
             id: 4,
@@ -108,7 +108,7 @@ const ProjectDetailsPage = () => {
             imageTwo: "url('/project8.png')",
             contentTwo: "The blog is built using React for dynamic interactivity, Tailwind CSS for styling, and APIs to fetch and manage content. Users can easily create and edit posts while interacting with other travellers.",
             contentThree: "In the real world, this project serves as a foundation for a scalable content platform. It could evolve into a more feature-rich application with multimedia support, user profiles, and integrations with travel services.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+            video: "/videos/travelblog.mp4",
         },
         {
             id: 5,
@@ -122,7 +122,7 @@ const ProjectDetailsPage = () => {
             imageTwo: "url('/project2.png')",
             contentTwo: "This project utilises GSAP for dynamic animations, ensuring seamless transitions and eye-catching effects. JavaScript, HTML, and CSS are used to build the banners, optimising them for both mobile and desktop platforms while maintaining performance and accessibility.",
             contentThree: "In a real-world setting, this project showcases expertise in frontend development for digital marketing, demonstrating the ability to create high-impact visual content that effectively communicates brand messages and enhances user engagement.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+            video: "/videos/bannerads.mp4",
         },
         {
             id: 6,
@@ -136,7 +136,7 @@ const ProjectDetailsPage = () => {
             imageTwo: "url('/project5.png')",
             contentTwo: "The app is built with React for smooth UI interactions, Bootstrap for styling, and JavaScript for handling dynamic budget calculations. Its minimalist design ensures ease of use.",
             contentThree: "In the real world, this app can help users maintain financial discipline. Future enhancements could include data visualisation, savings goals tracking, and bank account integrations.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+            video: "/videos/budgetplanner.mp4",
         },
         {
             id: 7,
@@ -150,7 +150,7 @@ const ProjectDetailsPage = () => {
             imageTwo: "url('/project6.png')",
             contentTwo: "The project is built using JavaScript for password logic, HTML for structure, and CSS for a clean and simple UI. Figma was used to design an intuitive interface that ensures a seamless user experience.",
             contentThree: "This tool enhances online security by helping users create strong passwords. Future improvements could include password storage options and integrations with password managers.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+            video: "/videos/passwordgenerator.mp4",
         },
         {
             id: 8,
@@ -164,7 +164,7 @@ const ProjectDetailsPage = () => {
             imageTwo: "url('/project7.png')",
             contentTwo: "The project runs in the terminal, prompting users for details about their project and formatting the input into a structured README file.",
             contentThree: "This tool saves time for developers by automating README creation. Future features could include custom templates and markdown previews.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+            video: "/videos/readmegenerator.mp4",
         }
     ];
        

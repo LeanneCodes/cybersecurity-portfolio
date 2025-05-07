@@ -23,23 +23,23 @@ const ProjectDetailsPage = () => {
 
     // Array of project details
     const projectGameDetails = [
+        // {
+        //     id: 1,
+        //     title: "Ecommerce",
+        //     description: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
+        //     labels: "MongoDB, Express, NextJs, Photoshop, GSAP, JavaScript, API, Tailwind",
+        //     liveLink: "https://example.com",
+        //     gitHub: "https://github.com/LeanneCodes/ecommerce",
+        //     imageOne: "url('/project2.png')",
+        //     contentOne: "The Ecommerce project is a showcase of various display banner ads built for high-profile clients. The goal is to create visually appealing, interactive, and engaging digital ads that cater to different audiences, from gamers to the natural hair community. Each ad is designed to capture attention quickly while maintaining brand consistency and effectiveness in communicating the intended message.",
+        //     imageTwo: "url('/project2.png')",
+        //     contentTwo: "Technically, this project integrates various modern web development tools and frameworks. Next.js provides a fast and SEO-friendly experience, while GSAP ensures smooth animations for dynamic ad interactions. APIs are used to fetch real-time product data, and Tailwind CSS streamlines styling, making development more efficient and scalable.",
+        //     imageThree: "url('/project2.png')",
+        //     contentThree: "In the real world, this project demonstrates expertise in creating engaging and high-performing digital ads that drive conversions and user engagement. It highlights skills in responsive design, animation, and API integration—key aspects that companies look for in frontend developers working in the advertising and e-commerce space.",
+        //     video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
+        // },
         {
             id: 1,
-            title: "Ecommerce",
-            description: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-            labels: "MongoDB, Express, NextJs, Photoshop, GSAP, JavaScript, API, Tailwind",
-            liveLink: "https://example.com",
-            gitHub: "https://github.com/LeanneCodes/ecommerce",
-            imageOne: "url('/project2.png')",
-            contentOne: "The Ecommerce project is a showcase of various display banner ads built for high-profile clients. The goal is to create visually appealing, interactive, and engaging digital ads that cater to different audiences, from gamers to the natural hair community. Each ad is designed to capture attention quickly while maintaining brand consistency and effectiveness in communicating the intended message.",
-            imageTwo: "url('/project2.png')",
-            contentTwo: "Technically, this project integrates various modern web development tools and frameworks. Next.js provides a fast and SEO-friendly experience, while GSAP ensures smooth animations for dynamic ad interactions. APIs are used to fetch real-time product data, and Tailwind CSS streamlines styling, making development more efficient and scalable.",
-            imageThree: "url('/project2.png')",
-            contentThree: "In the real world, this project demonstrates expertise in creating engaging and high-performing digital ads that drive conversions and user engagement. It highlights skills in responsive design, animation, and API integration—key aspects that companies look for in frontend developers working in the advertising and e-commerce space.",
-            video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
-        },
-        {
-            id: 2,
             title: "Spellbound",
             description: "A website that displays the current bestselling books based on the New York Times API.",
             labels: "NextJs, Tailwind, JavaScript, Figma, API, MongoDB",
@@ -69,7 +69,7 @@ const ProjectDetailsPage = () => {
             video: "/videos/spellbound-demo.mp4",
         },                                    
         {
-            id: 3,
+            id: 2,
             title: "Game Sync",
             description: "A web application designed to help users connect with friends and schedule times in their calendar to play games.",
             labels: "React, Gaming, Tailwind, API, HTML, AdobeXD",
@@ -83,7 +83,7 @@ const ProjectDetailsPage = () => {
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 4,
+            id: 3,
             title: "Silke",
             description: "Using the OpenWeather API data to see if getting a silk press will survive the dew point.",
             labels: "React, Tailwind, HTML, API, JavaScript",
@@ -97,7 +97,7 @@ const ProjectDetailsPage = () => {
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 5,
+            id: 4,
             title: "Oyster & Beyond Blog",
             description: "A travel blog that allows for diary entries and comments using a headless CMS.",
             labels: "React, Tailwind, HTML, API, JavaScript, HeadlessCMS, MongoDB",
@@ -111,7 +111,7 @@ const ProjectDetailsPage = () => {
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 6,
+            id: 5,
             title: "Banner Ads",
             description: "Showcasing a variety of display ad banners I build for esteemed clients, such as, Eurostar, Jet2, Nationwide, Jameson, Morrisons and more.",
             labels: "Mobile, Desktop, GSAP, JavaScript, CSS, HTML, React",
@@ -125,7 +125,7 @@ const ProjectDetailsPage = () => {
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 7,
+            id: 6,
             title: "Budget App",
             description: "A basic React app that shows the user how much money they have leftover after inputting their budget and expenses.",
             labels: "React, CSS, Bootstrap, JavaScript",
@@ -139,7 +139,7 @@ const ProjectDetailsPage = () => {
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 8,
+            id: 7,
             title: "Password Generator",
             description: "A password generator that takes in inputs from the user, which helps to create simple to complex passwords.",
             labels: "HTML, CSS, JavaScript, Figma",
@@ -153,7 +153,7 @@ const ProjectDetailsPage = () => {
             video: "https://www.youtube.com/embed/dl6etXJdjbQ?si=jRRNg3AV35FlvXr2",
         },
         {
-            id: 9,
+            id: 8,
             title: "ReadMe Generator",
             description: "Using NodeJs to create a ReadMe based on the user answering questions in the terminal.",
             labels: "NodeJs, VSCode",

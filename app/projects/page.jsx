@@ -20,12 +20,12 @@ const page = () => {
 
   // Project data with unique images
   const projects = [
-    {
-      title: "Ecommerce",
-      image: "/project2.png",
-      desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
-      labels: ["MongoDB", "Express", "NextJs", "Photoshop", "GSAP", "JavaScript", "API", "Tailwind"]
-    },
+    // {
+    //   title: "Ecommerce",
+    //   image: "/project2.png",
+    //   desc: "I build display banner ads for esteemed clients and projects for a variety of audiences, gaming, natural hair community.",
+    //   labels: ["MongoDB", "Express", "NextJs", "Photoshop", "GSAP", "JavaScript", "API", "Tailwind"]
+    // },
     {
       title: "Spellbound",
       image: "/project3.png",

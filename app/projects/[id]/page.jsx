@@ -392,7 +392,7 @@ const ProjectDetailsPage = () => {
                             <h1 className="font-montserrat font-bold xxs:text-[44px] md:text-[50px] xl:text-[62px]">{project.title}</h1>
                             <h2 className="w-full">{project.description}</h2>
                             
-                            <div className="mb-10 mt-3 flex flex-row justify-center gap-5 w-full">
+                            <div className="mb-10 mt-3 flex flex-row justify-center gap-5 w-full flex-wrap">
                                 {project.labels.split(",").map((label, index) => {
                                     const labelText = label.trim();
                                     return (

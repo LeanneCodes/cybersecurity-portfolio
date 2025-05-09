@@ -24,10 +24,10 @@ const CVModal = ({ cvOpen, toggleCVModal }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[150]"
+      className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[150] px-2"
       onClick={handleClickOutside}
     >
-      <div className="relative w-11/12 md:w-3/4 lg:w-2/3 bg-white rounded-lg overflow-hidden">
+      <div className="relative w-full max-w-4xl bg-white rounded-lg overflow-hidden shadow-lg">
         {/* Close Button */}
         <button
           onClick={toggleCVModal}
@@ -37,11 +37,44 @@ const CVModal = ({ cvOpen, toggleCVModal }) => {
           ×
         </button>
 
-        <iframe
-          src="/LeanneGoldsmith_CV.pdf"
-          title="CV PDF"
-          className="w-full h-[80vh]"
-        ></iframe>
+        {/* PDF Viewer for Medium and Larger Screens */}
+        <div className="hidden xs:block">
+          <object
+            data="/LeanneGoldsmith_CV.pdf"
+            type="application/pdf"
+            className="w-full h-[80vh]"
+          >
+            <p className="p-4 text-center">
+              Your browser doesn’t support PDF viewing.{" "}
+              <a
+                href="/LeanneGoldsmith_CV.pdf"
+                className="text-blue-500 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open the CV in a new tab
+              </a>
+              .
+            </p>
+          </object>
+        </div>
+
+        {/* Fallback for Small Screens */}
+        <div className="block xs:hidden p-6 text-center">
+          <p className="mb-4 text-black font-medium">
+            PDF viewing isn't supported on some mobile devices.
+          </p>
+          <a
+            href="/LeanneGoldsmith_CV.pdf"
+            download
+            className="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700"
+          >
+            Download CV
+          </a>
+          <p className="mt-2 text-sm text-gray-600">
+            Or open in a new tab for better viewing.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -108,8 +108,8 @@ const page = () => {
 
           {/* Main content */}
           <Link href={`/projects/${currentIndex + 1}`} className='cursor-pointer xxs:w-full lg:w-3/4 xl:w-1/2 flex justify-center'>
-            <div className='xxs:w-full md:w-[90%] xxs:gap-0 sm:p-10 lg:gap-8 md:p-0 flex'>
-              <div className='w-1/3'>
+            <div className='xxs:w-full lg:w-[90%] xxs:gap-0 sm:p-10 lg:gap-8 md:p-0 flex'>
+              <div className='xss:w-0 lg:w-1/3'>
                 <Image
                   alt={projects[currentIndex].title}
                   src={projects[currentIndex].image}
@@ -119,10 +119,10 @@ const page = () => {
                   priority
                 />
               </div>
-              <div className='flex flex-col justify-around xxs:items-center lg:items-start w-2/3 space-y-4'>
-                <h1 className='font-bold text-6xl xxs:mb-4 xxs:text-center lg:text-left lg:mb-0'>{projects[currentIndex].title}</h1>
+              <div className='flex flex-col justify-around xxs:items-center lg:items-start xxs:w-full xxs:px-8 lg:px-0 lg:w-2/3 space-y-4'>
+                <h1 className='font-bold xxs:text-4xl sm:text-6xl xxs:mb-4 xxs:text-center lg:text-left lg:mb-0'>{projects[currentIndex].title}</h1>
                 <p className='xxs:text-center lg:text-left'>{projects[currentIndex].desc}</p>
-                <div className="flex gap-2 mt-4 flex-wrap">
+                <div className="flex gap-2 mt-4 flex-wrap xxs:justify-center lg:justify-start">
                   {projects[currentIndex].labels.map((label, labelIndex) => (
                     <Labels key={labelIndex}>{label}</Labels>
                   ))}
@@ -152,8 +152,8 @@ const page = () => {
               onClick={() => setCurrentIndex(index)}
               className={`h-2 w-6 rounded-full ${
                 currentIndex === index
-                  ? "bg-white w-12"
-                  : "bg-white opacity-50 hover:bg-gray-500"
+                  ? "bg-tan w-12"
+                  : "bg-tan opacity-50 hover:bg-gray-500"
               }`}
             ></div>
           ))}

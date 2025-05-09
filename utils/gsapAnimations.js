@@ -35,7 +35,7 @@ export const animateProjectCards = (className) => {
 };
 
 export const leftAnimate = (className) => {
-    const isSmallScreen = window.matchMedia("(max-width: 1536px)").matches;
+    const isSmallScreen = window.matchMedia("(max-width: 1490px)").matches;
 
     gsap.fromTo(
         `.${className}`,
@@ -52,7 +52,7 @@ export const leftAnimate = (className) => {
 };
 
 export const rightAnimate = (className) => {
-    const isSmallScreen = window.matchMedia("(max-width: 1536px)").matches;
+    const isSmallScreen = window.matchMedia("(max-width: 1490px)").matches;
 
     gsap.fromTo(
         `.${className}`,

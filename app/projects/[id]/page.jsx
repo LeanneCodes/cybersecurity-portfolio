@@ -110,9 +110,13 @@ const ProjectDetailsPage = () => {
             This insight became the foundation of Silke: a web app that empowers users to make informed decisions about their hair by analysing localised weather data.`,
             
             imageTwo: "url('/silke-img2.png')",
-            contentTwo: `The app allows users to search for a city or town - whether it’s their current location or a travel destination - and view key metrics like temperature (Celsius or Fahrenheit), humidity, and dew point for the current day and the next five days.\n
-            A smart headline system analyses this data and offers tailored advice such as “Avoid getting a silk press” or “Perfect conditions for natural styles”. Each search is automatically saved to local storage, enabling users to revisit saved cities via a dashboard. A separate tab makes switching between locations seamless, updating the dashboard in real-time.\n
-            To support users in understanding the science behind hair and weather, Silke includes a comprehensive FAQ page. Users can browse all entries or use the search bar to filter results by keywords, making information quick and accessible.`,
+            contentTwo: `Built with React, the app uses useState, useEffect, and context for state management. Weather data is fetched from a third-party API, parsed to extract temperature, humidity, and dew point, and compared against predefined thresholds to generate contextual haircare advice. User searches are saved in localStorage, allowing quick access via a location-switching tab.
+
+            The FAQ section uses array filtering and input event listeners for real-time keyword search functionality.
+
+            Users can search for a city to view current and forecasted weather metrics (temperature, humidity, dew point) for the next five days. A smart headline system offers tailored haircare advice based on the weather, such as “Avoid silk press” or “Ideal for natural styles.” Each search is saved to localStorage, enabling users to revisit cities through a dashboard with a seamless location-switching feature.
+
+            A comprehensive FAQ page offers quick access to information, with a search bar for filtering results by keyword.`,
             
             contentThree: `Silke has been well-received by members of the Black community, who appreciate the thoughtful combination of weather science and hair care.
             Planned features include:\n
@@ -197,9 +201,36 @@ const ProjectDetailsPage = () => {
             gitHub: "https://github.com/LeanneCodes/budget-tracker",
             imageOne: "url('/budget-img1.png')",
             contentOne: "Budget App is a simple and effective tool for tracking finances. Users can input their income and expenses to calculate their remaining budget, making personal finance management more accessible.",
+            
             imageTwo: "url('/budget-img2.png')",
-            contentTwo: "The app is built with React for smooth UI interactions, Bootstrap for styling, and JavaScript for handling dynamic budget calculations. Its minimalist design ensures ease of use.",
-            contentThree: "In the real world, this app can help users maintain financial discipline. Future enhancements could include data visualisation, savings goals tracking, and bank account integrations.",
+            contentTwo: `The app was built using React, leveraging state management through the useState hook to track budget, expenses, and search input. Conditional rendering and array methods (map, filter, reduce) were used to display expenses, calculate totals, and implement real-time search.\n
+            Visual alerts for high-cost items rely on dynamic class assignment based on conditional checks. The app is fully deployed on Netlify, showcasing experience with static site hosting and deployment workflows.\n
+            Features:
+            - Set Budget: Users can input their total budget at the start of the session.\n
+            - Track Expenses: Users can add individual expenses, each with a name and cost.\n
+            - Visual Alerts: Expenses costing £500 or more are highlighted in red for easy identification.\n
+            - A "Remaining" box dynamically calculates and updates the leftover budget.\n
+            - A "Spent So Far" box tallies all recorded expenses.\n
+            - Search Functionality: A real-time search bar filters expenses by keyword, improving usability.\n
+            - User Interface: UI inspired by designs from Dribbble, ensuring a clean and intuitive user experience.\n
+            - Deployment: App deployed using Netlify, offering practical experience in publishing and maintaining live applications.`,
+            
+            contentThree: `Learning Outcomes:
+            - Gained hands-on experience with React’s state management, component structure, and props handling.
+
+            - Built interactive UI components and implemented dynamic updates through React hooks.
+
+            - Understood the full deployment lifecycle, from development to production.
+
+            Future Enhancements:
+            - Data Visualisation: Add charts to group and display spending by category.
+
+            - Savings Goals: Let users track targets and monitor progress.
+
+            - Bank Integration: Enable users to sync with real bank accounts for more accurate financial planning.
+
+            - Category Management: Introduce expense tagging and filtering by type (e.g., food, rent, entertainment).`,
+            
             video: "/videos/budgetplanner.mp4",
         },
         {
@@ -211,9 +242,29 @@ const ProjectDetailsPage = () => {
             gitHub: "https://github.com/LeanneCodes/vault-key-generator",
             imageOne: "url('/password-img1.png')",
             contentOne: "Password Generator is a tool designed to create secure passwords based on user preferences. Users can specify length, character types, and complexity to generate strong, unique passwords.",
+            
             imageTwo: "url('/password-img2.png')",
-            contentTwo: "The project is built using JavaScript for password logic, HTML for structure, and CSS for a clean and simple UI. Figma was used to design an intuitive interface that ensures a seamless user experience.",
-            contentThree: "This tool enhances online security by helping users create strong passwords. Future improvements could include password storage options and integrations with password managers.",
+            contentTwo: `The password generator is built using vanilla JavaScript, HTML, and CSS.
+
+            Input Validation
+            Users choose a password length between 8 and 128 characters. JavaScript checks this input and displays an alert if it's out of range.
+
+            Character Selection
+            Users can toggle inclusion of special characters, numbers, lowercase, and uppercase letters. These choices determine the character pool used for generation.
+
+            Password Generation
+            A loop selects random characters from the active pool based on the chosen length. This ensures a secure and unpredictable password.
+
+            Clipboard Copy
+            Passwords can be copied with a single click using navigator.clipboard.writeText().
+
+            UI and Design
+            The layout uses CSS Flexbox for responsiveness and is inspired by clean UI designs from Dribbble. Accessibility and clear labelling are also prioritised.`,
+            
+            contentThree: `This project strengthened my core JavaScript skills, particularly in DOM manipulation, event handling, and form validation, while also introducing me to defensive programming and clipboard API usage.\n
+            I enhanced my understanding of user experience through interface prototyping and feedback integration.\n
+            Looking ahead, I plan to add features such as a real-time password strength meter, offline support via PWA capabilities, and integration with breach-check APIs like "Have I Been Pwned." Additional improvements may include local password storage, multi-language support, and browser extension functionality.`,
+            
             video: "/videos/passwordgenerator.mp4",
         },
         {
@@ -224,10 +275,39 @@ const ProjectDetailsPage = () => {
             liveLink: "https://leannecodes.github.io/readme_generator/",
             gitHub: "https://github.com/LeanneCodes/readme-generator",
             imageOne: "url('/readme-img1.png')",
-            contentOne: "ReadMe Generator is a Node.js-based tool that generates professional README files based on user input. It streamlines the process of creating documentation for projects.",
+            contentOne: `This project is designed to simplify the process of creating README files.\n
+            Using the Inquirer library, it prompts users with a series of questions in the terminal. Based on their responses, the tool automatically generates a markdown-formatted README file.\n
+            This file includes a table of contents, installation instructions, usage guidelines, licence information, testing instructions, and even a contact section, making it a quick and efficient way to set up a professional README for any project.`,
+            
             imageTwo: "url('/readme-img2.png')",
-            contentTwo: "The project runs in the terminal, prompting users for details about their project and formatting the input into a structured README file.",
-            contentThree: "This tool saves time for developers by automating README creation. Future features could include custom templates and markdown previews.",
+            contentTwo: `The project is built using Node.js and leverages the Inquirer library for interactive user input in the terminal.\n
+            Upon answering a series of questions, the application dynamically generates a comprehensive README file in markdown format. Key features include:
+
+            - Table of Contents: Automatically generated based on user input.
+
+            - Installation Instructions: Tailored to guide users through setting up the project.
+
+            - Usage Instructions: Customised based on how the user intends to use their project.
+
+            - Licence Information: Adds the appropriate licence section based on user input.
+
+            - Testing Instructions: Generates instructions on testing the project to ensure it's functioning properly.
+
+            This tool removes the hassle of formatting a README manually, allowing developers to quickly focus on building their projects.`,
+            
+            contentThree: `Current Results:
+            The tool successfully generates a standard README file with all the necessary sections, including installation, usage, and testing instructions. This project is especially helpful for developers who need a consistent and professional README but want to avoid the time-consuming process of manually writing it.
+
+            Future Potential:
+            Looking forward, the project can be expanded in several ways:
+            - More Detailed Questions: By asking more detailed questions, the tool could generate even more tailored and specific README files.
+
+            - Template Variety: Introducing multiple templates for different types of projects could make the README even more engaging and fit the style of specific domains (e.g., open source, enterprise, personal).
+
+            - Enhanced User Customisation: Future versions could allow users to further customise the format and content, such as adding badges, custom sections, or multi-language support.
+
+            This project has the potential to grow into a highly valuable tool for developers, automating the creation of one of the most important aspects of a project - its documentation.`,
+            
             video: "/videos/readmegenerator.mp4",
         }
     ];

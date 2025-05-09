@@ -33,7 +33,7 @@ const page = () => {
       labels: ["NextJs", "Tailwind", "JavaScript", "Figma", "API", "MongoDB"]
     },
     {
-      title: "Game Sync",
+      title: "GameSync",
       image: "/project1.png",
       desc: "A web application designed to help users connect with friends and schedule times in their calendar to play games.",
       labels: ["React", "Gaming", "Tailwind", "API", "HTML", "AdobeXD"]
@@ -51,10 +51,10 @@ const page = () => {
       labels: ["React", "Tailwind", "HTML", "API", "JavaScript", "HeadlessCMS", "MongoDB"]
     },
     {
-      title: "Banner Ads",
-      image: "/project2.png",
+      title: "Display Banner Ads",
+      image: "/banner-img1.png",
       desc: "Showcasing a variety of display ad banners I build for esteemed clients, such as, Eurostar, Jet2, Nationwide, Jameson, Morrisons and more.",
-      labels: ["Mobile", "Desktop", "GSAP", "JavaScript", "CSS", "HTML", "React", "Photoshop"]
+      labels: ["Mobile", "Desktop", "GSAP", "JavaScript", "CSS", "HTML", "Photoshop"]
     },
     {
       title: "Budget App",

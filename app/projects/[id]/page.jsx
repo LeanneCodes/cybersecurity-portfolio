@@ -157,7 +157,7 @@ const ProjectDetailsPage = () => {
             title: "ReadMe Generator",
             description: "Using NodeJs to create a ReadMe based on the user answering questions in the terminal.",
             labels: "NodeJs, VSCode",
-            liveLink: "https://example.com",
+            liveLink: "https://leannecodes.github.io/readme_generator/",
             gitHub: "https://github.com/LeanneCodes/readme-generator",
             imageOne: "url('/project7.png')",
             contentOne: "ReadMe Generator is a Node.js-based tool that generates professional README files based on user input. It streamlines the process of creating documentation for projects.",

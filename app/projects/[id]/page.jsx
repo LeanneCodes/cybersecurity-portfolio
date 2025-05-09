@@ -76,10 +76,25 @@ const ProjectDetailsPage = () => {
             liveLink: "https://gamesync-game-session-scheduler.netlify.app/",
             gitHub: "https://github.com/visualriot/Gaming-scheduler",
             imageOne: "url('/gamesync-img1.png')",
-            contentOne: "GameSync is a web application designed to help gamers coordinate play sessions with friends. The idea is to make it easier for users to find common free time, reducing the frustration of trying to organise gaming sessions via scattered messages and unreliable schedules.",
+            contentOne: `GameSync was designed to remove the friction of planning multiplayer sessions with friends. The idea stemmed from a common frustration among gamers: finding mutually available time to play.\n
+            This platform enables users to create “squads” (i.e. teams), select shared games of interest, and input individual availability. From there, the app automatically generates a personalised schedule - including estimated play durations - to streamline game sessions and help users make the most of their time online.\n
+            Beyond scheduling, GameSync allows users to save their sessions, revisit past game progress, and see up-to-date availability across squad members. Individuals can also curate a personal wish list of games they’d like to play, then quickly launch new sessions based on those preferences and select which squad they’d like to play with. All session data and availability is retained, meaning a seamless, low-effort experience for all users.`,
+            
             imageTwo: "url('/gamesync-img2.png')",
-            contentTwo: "Built using React, the app leverages APIs to integrate with external calendar services, allowing users to sync their availability seamlessly. Tailwind CSS ensures a sleek and responsive interface, while Adobe XD was used to design an intuitive user experience before development began.",
-            contentThree: "This project solves a common issue for gamers by making scheduling effortless. In a real-world scenario, this app could evolve into a full-fledged social platform for gamers, integrating chat features, matchmaking, and notifications to enhance the experience further.",
+            contentTwo: `This project was built using React, supported by HTML, CSS, JavaScript, and styled with Tailwind CSS.\n
+            Two external APIs were integrated - one for gaming information and the other for estimating playtime durations, which added a personalised and insightful layer to the experience.\n
+            A major focus was on creating clean, responsive UI components and logic to dynamically cross-match game preferences and availability.\n
+            Building intuitive squad and wishlist functionality was another key technical achievement, requiring thoughtful state management and component architecture.`,
+            
+            contentThree: `GameSync was presented as a final group project during a frontend development bootcamp, where it received an A grade and positive feedback for originality, usability and polish. It demonstrated strong teamwork, clear understanding of React principles, and an ability to design with user experience in mind.\n
+            The team is currently working on expanding the project into a full-stack application. Planned improvements include:\n
+            - A backend implementation to support user authentication, persistent data storage, and real-time updates\n
+            - A built-in chat feature so users can communicate within the platform\n
+            - Enhanced squad functionality, with more control over avatars and group customisation\n
+            - UX enhancements based on user research and testing.\n
+            - Potential transition to Next.js and evaluation of additional frameworks for scalability and performance.\n
+            This project laid the groundwork for a genuinely useful gaming tool with broader potential, and the team is actively exploring best practices and audience insights to shape its next phase.`,
+            
             video: "/videos/gamesync.mp4",
         },
         {
@@ -90,24 +105,51 @@ const ProjectDetailsPage = () => {
             liveLink: "https://silke.vercel.app/",
             gitHub: "https://github.com/LeanneCodes/silke",
             imageOne: "url('/silke-img1.png')",
-            contentOne: "Silke is a unique project that uses weather data to help individuals decide whether their silk press will hold up against the elements. The tool provides real-time weather analysis, focusing on humidity and dew points that impact hair longevity.",
+            contentOne: `Silke is a personal passion project inspired by the unique relationship between Black Afro hair and the weather. Many women in the Black community often choose their hairstyles based on environmental conditions - particularly in the UK, where humidity and dew point can make or break a hairstyle.\n
+            Through extensive research and development, I discovered that dew point plays a more critical role than humidity alone in determining whether wearing natural hair out is safe or damaging.\n
+            This insight became the foundation of Silke: a web app that empowers users to make informed decisions about their hair by analysing localised weather data.`,
+            
             imageTwo: "url('/silke-img2.png')",
-            contentTwo: "Built with React and Tailwind CSS, Silke leverages the OpenWeather API to fetch accurate forecasts. The intuitive UI presents users with easy-to-understand recommendations based on their location and hair type.",
-            contentThree: "Silke serves as a helpful resource for those navigating hair care in different climates. In the future, it could expand to include personalised recommendations and integrations with hair care brands for tailored product suggestions.",
+            contentTwo: `The app allows users to search for a city or town - whether it’s their current location or a travel destination - and view key metrics like temperature (Celsius or Fahrenheit), humidity, and dew point for the current day and the next five days.\n
+            A smart headline system analyses this data and offers tailored advice such as “Avoid getting a silk press” or “Perfect conditions for natural styles”. Each search is automatically saved to local storage, enabling users to revisit saved cities via a dashboard. A separate tab makes switching between locations seamless, updating the dashboard in real-time.\n
+            To support users in understanding the science behind hair and weather, Silke includes a comprehensive FAQ page. Users can browse all entries or use the search bar to filter results by keywords, making information quick and accessible.`,
+            
+            contentThree: `Silke has been well-received by members of the Black community, who appreciate the thoughtful combination of weather science and hair care.
+            Planned features include:\n
+            - SMS alerts: Users will be able to input their salon appointment date and location. If the dew point for that location suggests unsuitable hair conditions (e.g. a silk press is likely to revert), they will receive a text 48 hours in advance, giving them time to reschedule or cancel without losing their deposit.\n
+            - Brand partnerships: There’s potential to integrate protective hair products directly into the platform, giving users real-time recommendations on what to use when styling in less-than-ideal conditions.\n
+            Silke is more than a weather app - it’s a tool for empowerment, education, and proactive self-care.`,
+            
             video: "/videos/silke.mp4",
         },
         {
             id: 4,
-            title: "Oyster & Beyond Blog",
+            title: "Oyster & Beyond Travel Blog",
             description: "A travel blog that allows for diary entries and comments using a headless CMS.",
             labels: "React, Tailwind, HTML, API, JavaScript, HeadlessCMS, MongoDB",
             liveLink: "https://oyster-and-beyond-blog.vercel.app/",
             gitHub: "https://github.com/LeanneCodes/oyster-and-beyond-blog",
             imageOne: "url('/oyster-img1.png')",
-            contentOne: "Oyster & Beyond Blog is a platform for travellers to document their journeys, share diary entries, and engage with a community through comments. The project leverages a headless CMS to provide a seamless content management experience.",
+            contentOne: `Oyster & Beyond is my personal travel blog designed to share honest reflections on the places I’ve visited.\n
+            As someone passionate about travel, storytelling, and user experience, this platform allows me to connect with an audience through in-depth travel posts, photos, and recommendations, all while maintaining editorial control through a custom-built content management workflow.`,
+            
             imageTwo: "url('/oyster-img2.png')",
-            contentTwo: "The blog is built using React for dynamic interactivity, Tailwind CSS for styling, and APIs to fetch and manage content. Users can easily create and edit posts while interacting with other travellers.",
-            contentThree: "In the real world, this project serves as a foundation for a scalable content platform. It could evolve into a more feature-rich application with multimedia support, user profiles, and integrations with travel services.",
+            contentTwo: `Built with Next.js and powered by a headless CMS, the platform allows me to:
+            - Easily write and publish travel blog posts via the CMS.\n
+            - Approve or decline reader comments to ensure all on-site discussions remain respectful and appropriate for a general audience.\n
+            - Categorise content by continent, making it easy for users to explore destinations geographically (e.g. UK, Africa, Europe).\n
+            - Feature recent or related posts in a "Recent Posts" widget. So, if a user is reading about Barcelona, for instance, they may be recommended other European travel posts.\n
+            - Showcase a carousel of recent destinations at the top of the site. Clicking an image takes users directly to the related blog post.`,
+            
+            contentThree: `Oyster & Beyond has become my digital travel journal and a valuable resource for readers planning trips or seeking destination inspiration.\n
+            As the platform grows, my next steps include:
+            - Publishing more travel stories across new destinations.\n
+            - Partnering with travel brands and products, for example, pairing a post on Crete with local tour suggestions.\n
+            - Enhancing the blog with trip-planning features, packing lists, or affiliate links to curated products and services.\n
+            - Allowing users to create personal profiles so they can track which posts they've commented on, fostering a sense of community and engagement.\n
+            - Integrating with travel agencies to offer users curated travel packages, local tour recommendations, or exclusive deals tied to specific destinations covered on the blog.\n
+            These future updates aim to enrich the user experience, support monetisation, and deepen the platform’s role as a trusted travel companion.`,
+            
             video: "/videos/travelblog.mp4",
         },
         {
@@ -118,10 +160,32 @@ const ProjectDetailsPage = () => {
             liveLink: "https://leannecodes.github.io/banner_ads/",
             gitHub: "https://github.com/LeanneCodes/banner_ads",
             imageOne: "url('/banner-img2.png')",
-            contentOne: "Banner Ads is a collection of high-quality display advertisements created for well-known brands. These ads are designed to engage users and drive conversions by combining compelling visuals with smooth animations and interactive elements.",
+            contentOne: `As a Frontend Developer, I specialise in building high-performance, dynamic HTML5 display banners for a range of clients. My role bridges the gap between static creative designs and interactive ad experiences that can scale efficiently across multiple variations.
+
+            Responsibilities:
+            - Translate designs from creative agencies into responsive, animated HTML5 banners.\n
+            - Build and maintain custom banner templates using HTML, CSS, JavaScrip and GSAPt.\n
+            - Integrate banners with the Google Marketing Platform, ensuring compliance with technical requirements and limitations.\n
+            - Create dynamic ad units powered by Google Sheets feeds, enabling real-time changes to copy, CTAs, images, and backgrounds.`,
+
             imageTwo: "url('/banner-img3.png')",
-            contentTwo: "This project utilises GSAP for dynamic animations, ensuring seamless transitions and eye-catching effects. JavaScript, HTML, and CSS are used to build the banners, optimising them for both mobile and desktop platforms while maintaining performance and accessibility.",
-            contentThree: "In a real-world setting, this project showcases expertise in frontend development for digital marketing, demonstrating the ability to create high-impact visual content that effectively communicates brand messages and enhances user engagement.",
+            contentTwo: `I code all banners using a JavaScript framework integrated with GSAP (GreenSock Animation Platform) to deliver smooth, performant animations.\n
+            I ensure each banner is fully dynamic. While I may receive a single flat design, my templates support automated content variations at scale.\n
+            The integration with Google Sheets allows clients to manage and preview hundreds (sometimes thousands) of ad variations, swapping in new content without any code changes.`,
+            
+            contentThree: `For Jet2, we received static Photoshop designs and converted them into a dynamic, animated HTML5 banner campaign. Using one coded template, we generated 300+ variations, each with unique combinations of copy, backgrounds, and calls to action-powered by a structured Google Sheet feed.
+
+            Impact:
+            - Saved clients thousands in creative production costs.\n
+            - Reduced turnaround time by eliminating the need for manually designed banner variations.\n
+            - Empowered clients with flexibility to update content without technical involvement.\n
+            - Strengthened client relationships by showcasing scalable, performant ad solutions.
+
+            Future Potential:
+            I’m currently developing new features for our templates to give clients even more control, flexibility, and interactivity.
+
+            These advancements will allow our agency to deliver even greater value, demonstrate innovation to prospective clients, and remain competitive in the digital advertising space.`,
+            
             video: "/videos/bannerads.mp4",
         },
         {

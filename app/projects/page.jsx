@@ -45,7 +45,7 @@ const page = () => {
       labels: ["React", "Tailwind", "HTML", "API", "JavaScript"]
     },
     {
-      title: "Oyster & Beyond Blog",
+      title: "Oyster & Beyond Travel Blog",
       image: "/project8.png",
       desc: "A travel blog that allows for diary entries and comments using a headless CMS.",
       labels: ["React", "Tailwind", "HTML", "API", "JavaScript", "HeadlessCMS", "MongoDB"]

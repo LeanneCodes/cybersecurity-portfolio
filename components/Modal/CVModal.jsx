@@ -72,7 +72,7 @@ const CVModal = ({ cvOpen, toggleCVModal }) => {
             Download CV
           </a>
           <p className="mt-2 text-sm text-gray-600">
-            Or open in a new tab for better viewing.
+            Downloading CV will open it in a new tab.
           </p>
         </div>
       </div>

@@ -458,8 +458,8 @@ const ProjectDetailsPage = () => {
                         onClick={() => setCurrentIndex(index)}
                         className={`h-2 w-6 rounded-full ${
                             currentIndex === index
-                            ? "bg-white w-12"
-                            : "bg-white opacity-50 hover:bg-gray-500"
+                            ? "bg-moss w-12"
+                            : "bg-moss opacity-50 hover:bg-gray-500"
                         }`}
                         ></div>
                     ))}

@@ -92,7 +92,7 @@ const page = () => {
 
   return (
     <div className='flex flex-col top-[149px] w-full'>
-      <div className='bg-blurred-mantel bg-cover object-cover bg-no-repeat bg-bottom bg-fixed flex flex-col justify-center items-center w-full h-[450px] relative'>
+      <div className='xxs:bg-gray-100 bg-blurred-mantel bg-cover object-cover bg-no-repeat bg-bottom bg-fixed flex flex-col justify-center items-center w-full h-[450px] relative'>
         
         {/* Carousel */}
         <div className='xxs:w-4/5 lg:w-full h-full flex justify-around items-center'>
@@ -152,8 +152,8 @@ const page = () => {
               onClick={() => setCurrentIndex(index)}
               className={`h-2 w-6 rounded-full ${
                 currentIndex === index
-                  ? "bg-tan w-12"
-                  : "bg-tan opacity-50 hover:bg-gray-500"
+                  ? "bg-moss w-12"
+                  : "bg-moss opacity-50 hover:bg-gray-500"
               }`}
             ></div>
           ))}

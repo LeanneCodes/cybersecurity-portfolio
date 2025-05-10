@@ -108,7 +108,7 @@ const page = () => {
 
           {/* Main content */}
           <Link href={`/projects/${currentIndex + 1}`} className='cursor-pointer xxs:w-full lg:w-3/4 xl:w-1/2 flex justify-center'>
-            <div className='xxs:w-full lg:w-[90%] xxs:gap-0 sm:p-10 lg:gap-8 md:p-0 flex'>
+            <div className='xxs:w-full lg:w-[90%] xxs:gap-0 sm:p-10 lg:gap-8 md:p-0 flex items-center'>
               <div className='xss:w-0 lg:w-1/3'>
                 <Image
                   alt={projects[currentIndex].title}

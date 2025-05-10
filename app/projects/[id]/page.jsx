@@ -47,15 +47,13 @@ const ProjectDetailsPage = () => {
             gitHub: "https://github.com/LeanneCodes/spellbound",
             imageOne: "url('/spellbound-img1.png')",
             contentOne: `Spellbound is a web application designed to showcase the best-selling books ranked by The New York Times.\n
-            It provides users with an easy and engaging way to explore books, authors, and categories from the NYT Best Seller list.\n
-            Whether users are looking for their next great read or simply curious about current literary trends, Spellbound makes book discovery effortless.\n
-            The platform allows users to browse the latest best-sellers, search for specific titles or authors, and filter books by category. 
-            To keep readers updated, it includes notifications whenever the list is refreshed.\n
+            It provides users with an easy and engaging way to explore books, authors, and categories from the NYT Best Seller list. Whether users are looking for their next great read or simply curious about current literary trends, Spellbound makes book discovery effortless.\n
+            The platform allows users to browse the latest best-sellers, search for specific titles or authors, and filter books by category. To keep readers updated, it includes notifications whenever the list is refreshed.\n
             Additionally, Spellbound offers personalised book recommendations based on user interests, enhancing engagement and making the browsing experience more interactive.`,
             
             imageTwo: "url('/spellbound-img2.png')",
             contentTwo: `Spellbound is built using modern web technologies and integrates multiple APIs to deliver up-to-date book information.\n
-            The key technical components include:\n
+            The key technical components include:
             -New York Times Books API: Retrieves real-time best-seller data to ensure book listings remain current.\n
             -MongoDB Database: Stores and manages book data efficiently, with automatic updates every 24 hours to prevent excessive API requests.\n
             -Open Library API: Provides additional details about authors, including biographies and other published works.\n
@@ -87,7 +85,7 @@ const ProjectDetailsPage = () => {
             Building intuitive squad and wishlist functionality was another key technical achievement, requiring thoughtful state management and component architecture.`,
             
             contentThree: `GameSync was presented as a final group project during a frontend development bootcamp, where it received an A grade and positive feedback for originality, usability and polish. It demonstrated strong teamwork, clear understanding of React principles, and an ability to design with user experience in mind.\n
-            The team is currently working on expanding the project into a full-stack application. Planned improvements include:\n
+            The team is currently working on expanding the project into a full-stack application. Planned improvements include:
             - A backend implementation to support user authentication, persistent data storage, and real-time updates\n
             - A built-in chat feature so users can communicate within the platform\n
             - Enhanced squad functionality, with more control over avatars and group customisation\n
@@ -105,7 +103,7 @@ const ProjectDetailsPage = () => {
             liveLink: "https://silke.vercel.app/",
             gitHub: "https://github.com/LeanneCodes/silke",
             imageOne: "url('/silke-img1.png')",
-            contentOne: `Silke is a personal passion project inspired by the unique relationship between Black Afro hair and the weather. Many women in the Black community often choose their hairstyles based on environmental conditions - particularly in the UK, where humidity and dew point can make or break a hairstyle.\n
+            contentOne: `Silke is a personal passion project inspired by the unique relationship between Black Afro hair and the weather. Many women in the Black community often choose their hairstyles based on environmental conditions, particularly in the UK, where humidity and dew point can make or break a hairstyle.\n
             Through extensive research and development, I discovered that dew point plays a more critical role than humidity alone in determining whether wearing natural hair out is safe or damaging.\n
             This insight became the foundation of Silke: a web app that empowers users to make informed decisions about their hair by analysing localised weather data.`,
             
@@ -118,8 +116,8 @@ const ProjectDetailsPage = () => {
 
             A comprehensive FAQ page offers quick access to information, with a search bar for filtering results by keyword.`,
             
-            contentThree: `Silke has been well-received by members of the Black community, who appreciate the thoughtful combination of weather science and hair care.
-            Planned features include:\n
+            contentThree: `Silke has been well-received by members of the Black community, who appreciate the thoughtful combination of weather science and hair care.\n
+            Planned features include:
             - SMS alerts: Users will be able to input their salon appointment date and location. If the dew point for that location suggests unsuitable hair conditions (e.g. a silk press is likely to revert), they will receive a text 48 hours in advance, giving them time to reschedule or cancel without losing their deposit.\n
             - Brand partnerships: There’s potential to integrate protective hair products directly into the platform, giving users real-time recommendations on what to use when styling in less-than-ideal conditions.\n
             Silke is more than a weather app - it’s a tool for empowerment, education, and proactive self-care.`,
@@ -168,16 +166,16 @@ const ProjectDetailsPage = () => {
 
             Responsibilities:
             - Translate designs from creative agencies into responsive, animated HTML5 banners.\n
-            - Build and maintain custom banner templates using HTML, CSS, JavaScrip and GSAPt.\n
+            - Build and maintain custom banner templates using HTML, CSS, JavaScript and GSAP (GreenSock Animation Platform).\n
             - Integrate banners with the Google Marketing Platform, ensuring compliance with technical requirements and limitations.\n
             - Create dynamic ad units powered by Google Sheets feeds, enabling real-time changes to copy, CTAs, images, and backgrounds.`,
 
             imageTwo: "url('/banner-img3.png')",
-            contentTwo: `I code all banners using a JavaScript framework integrated with GSAP (GreenSock Animation Platform) to deliver smooth, performant animations.\n
+            contentTwo: `I code all banners using a JavaScript framework integrated with GSAP to deliver smooth, performant animations.\n
             I ensure each banner is fully dynamic. While I may receive a single flat design, my templates support automated content variations at scale.\n
             The integration with Google Sheets allows clients to manage and preview hundreds (sometimes thousands) of ad variations, swapping in new content without any code changes.`,
             
-            contentThree: `For Jet2, we received static Photoshop designs and converted them into a dynamic, animated HTML5 banner campaign. Using one coded template, we generated 300+ variations, each with unique combinations of copy, backgrounds, and calls to action-powered by a structured Google Sheet feed.
+            contentThree: `For Jet2, we received static Photoshop designs and converted them into a dynamic, animated HTML5 banner campaign. Using one coded template, we generated 300+ variations, each with unique combinations of copy, backgrounds, and calls to action, powered by a structured Google Sheet feed.
 
             Impact:
             - Saved clients thousands in creative production costs.\n
@@ -186,7 +184,7 @@ const ProjectDetailsPage = () => {
             - Strengthened client relationships by showcasing scalable, performant ad solutions.
 
             Future Potential:
-            I’m currently developing new features for our templates to give clients even more control, flexibility, and interactivity.
+            - I’m currently developing new features for our templates to give clients even more control, flexibility, and interactivity.
 
             These advancements will allow our agency to deliver even greater value, demonstrate innovation to prospective clients, and remain competitive in the digital advertising space.`,
             
@@ -281,8 +279,8 @@ const ProjectDetailsPage = () => {
             
             imageTwo: "url('/readme-img2.png')",
             contentTwo: `The project is built using Node.js and leverages the Inquirer library for interactive user input in the terminal.\n
-            Upon answering a series of questions, the application dynamically generates a comprehensive README file in markdown format. Key features include:
-
+            Upon answering a series of questions, the application dynamically generates a comprehensive README file in markdown format.\n
+            Key features include:
             - Table of Contents: Automatically generated based on user input.
 
             - Installation Instructions: Tailored to guide users through setting up the project.
@@ -296,10 +294,9 @@ const ProjectDetailsPage = () => {
             This tool removes the hassle of formatting a README manually, allowing developers to quickly focus on building their projects.`,
             
             contentThree: `Current Results:
-            The tool successfully generates a standard README file with all the necessary sections, including installation, usage, and testing instructions. This project is especially helpful for developers who need a consistent and professional README but want to avoid the time-consuming process of manually writing it.
+            - The tool successfully generates a standard README file with all the necessary sections, including installation, usage, and testing instructions. This project is especially helpful for developers who need a consistent and professional README but want to avoid the time-consuming process of manually writing it.
 
             Future Potential:
-            Looking forward, the project can be expanded in several ways:
             - More Detailed Questions: By asking more detailed questions, the tool could generate even more tailored and specific README files.
 
             - Template Variety: Introducing multiple templates for different types of projects could make the README even more engaging and fit the style of specific domains (e.g., open source, enterprise, personal).

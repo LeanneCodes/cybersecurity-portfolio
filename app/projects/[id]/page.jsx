@@ -47,7 +47,7 @@ const ProjectDetailsPage = () => {
             gitHub: "https://github.com/LeanneCodes/spellbound",
             imageOne: "url('/spellbound-img1.png')",
             contentOne: `Spellbound is a web application designed to showcase the best-selling books ranked by The New York Times.\n
-            It provides users with an easy and engaging way to explore books, authors, and categories from the NYT Best Seller list. 
+            It provides users with an easy and engaging way to explore books, authors, and categories from the NYT Best Seller list.\n
             Whether users are looking for their next great read or simply curious about current literary trends, Spellbound makes book discovery effortless.\n
             The platform allows users to browse the latest best-sellers, search for specific titles or authors, and filter books by category. 
             To keep readers updated, it includes notifications whenever the list is refreshed.\n

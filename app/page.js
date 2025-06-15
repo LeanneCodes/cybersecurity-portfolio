@@ -28,6 +28,8 @@ export default function Home() {
           priority
         />
 
+        {/* test */}
+
         <h1 className="xxs:w-4/5 xxs:mx-auto xxs:text-center xxs:text-sm xs:w-3/4 md:text-[16px] md:w-3/5 lg:text-left lg:ml-[100px] lg:w-1/2 2xl:w-1/2 mt-[50px] 4xl:ml-[200px] w-[40%] relative z-10 text-[20px]">
           I create intuitive front-end experiences that solve real-life problems - from syncing game nights to checking if it's silk press weather.
         </h1>
